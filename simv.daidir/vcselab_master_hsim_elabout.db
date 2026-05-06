@@ -1,4 +1,4 @@
-fHsimDesignHasDebugNodes           	5
+fHsimDesignHasDebugNodes           	0
 fNSParam                           	1024
 fLargeSizeSdfTest                  	0
 fHsimDelayGateMbme                 	0
@@ -217,7 +217,7 @@ fHsimNewEvcdWTest                  	0
 fHsimEvcdDbgFlags                  	0
 fHsimNewEvcdMultiDrvFmt            	1
 fHsimRelPath                       	0
-fHsimDumpOffsetData                	1
+fHsimDumpOffsetData                	0
 fFlopGlitchDetect                  	0
 fHsimClkGlitch                     	0
 fHsimGlitchDumpOnce                	0
@@ -752,7 +752,7 @@ fHsimSchedMinput                   	0
 fHsimSchedSeqPrim                  	0
 fHsimSchedSelectFanout             	0
 fHsimSchedSelectFanoutDebug        	0
-fSpecifyInDesign                   	0
+fSpecifyInDesign                   	1
 fFgpDynamicReadOn                  	0
 fHsCgOptAllUc                      	0
 fHsimXmrRepl                       	0
@@ -811,7 +811,7 @@ fHsimPreInlineInstNum64            	0
 fHsimAutoInstNum64Limit            	-7
 fHsimAutoEnableInstNum64PC         	0
 fHsCgOptFixLeaf                    	1
-fHsimDumpVars                      	1
+fHsimDumpVars                      	0
 fFgpTbReactiveLite                 	1
 fHsCgOptCongLite                   	1
 fHsimGateDiag                      	0

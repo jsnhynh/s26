@@ -1,3 +1,6 @@
 Run for 287 S26 project 
-Run at Wed May  6 16:10:18 2026
-VCS simulation failed
+Run at Wed May  6 16:13:50 2026
+VCS simulation ran
+Synthesis worked ish
+VCS simulation ran
+Proj worked

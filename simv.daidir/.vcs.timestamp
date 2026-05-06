@@ -1,5 +1,5 @@
 0
-22
+23
 -Mamsrun=
 -Masflags=--32
 -Mcc=gcc
@@ -21,7 +21,8 @@
 -picarchive
 -sverilog
 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/bin/vcs1
-tbs26.svp
+/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v
+tbs26gates.svp
 83
 which_declare=declare -f
 cdk_dir=/apps/cadence/IC50/tools/dfII/local
@@ -108,13 +109,14 @@ CDS=/apps/cadence
 ARCH=linux
 0
 0
-2
-1778109001 E1000X.sv
-1777588933 tbs26.svp
+3
+1778109239 E1000X_gates.v
+1777588950 tbs26gates.svp
+1204216060 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v
 4
 1723522646 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libvirsim.so
 1723520847 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/liberrorinf.so
 1723520604 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libsnpsmalloc.so
 1723521397 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libvfs.so
-1778109021 simv.daidir
+1778109242 simv.daidir
 -1 partitionlib

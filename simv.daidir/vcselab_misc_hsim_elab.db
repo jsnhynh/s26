@@ -30,7 +30,7 @@ fHsimTaskFuncXmrsDbg               	0
 fHsimAllTaskFuncXmrs               	0
 fHsimDoXmrProcessing               	1
 fNoMergeDelays                     	0
-uGlblTimeUnit                      	4
+uGlblTimeUnit                      	5
 fHsimAllMtm                        	0
 fSimprofileNew                     	0
 fFsimFlag                          	0
@@ -61,7 +61,7 @@ fCcExConfigFileFlag                	0
 fFsimForcelist                     	0
 fNewCBSemantics                    	1
 fSchedAtEnd                        	0
-fSpecifyInDesign                   	0
+fSpecifyInDesign                   	1
 fSvNettRealResType                 	0
 fFgpSched0User                     	0
 fFgpDynelabFix                     	1
@@ -264,7 +264,7 @@ fHsimNewEvcdMultiDrvFmt            	1
 fHsimRelPath                       	0
 fHsimDumpElabData                  	1
 fHsimNoDeposit                     	0
-fHsimDumpOffsetData                	1
+fHsimDumpOffsetData                	0
 fNoOfsOpt                          	0
 fFlopGlitchDetect                  	0
 fHsimClkGlitch                     	0
@@ -1376,7 +1376,7 @@ fHsimPreInlineInstNum64            	0
 fHsimAutoInstNum64Limit            	-7
 fHsimAutoEnableInstNum64PC         	0
 fHsCgOptFixLeaf                    	1
-fHsimDumpVars                      	1
+fHsimDumpVars                      	0
 fFgpTbReactiveLite                 	1
 fHsimCcnUnion                      	0
 fHsimOnlyElabMod                   	0

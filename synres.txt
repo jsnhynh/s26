@@ -31,10 +31,10 @@ Please use '-no_save' simv switch to avoid this.
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed May  6 16:00:25 2026
+Current time:       Wed May  6 16:13:56 2026
 Hostname:           coe-ee-cad2.sjsuad.sjsu.edu
 CPU Model:          Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
-CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 4.30 GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 0.80 GHz
 OS:                 Linux 5.14.0-611.16.1.el9_7.x86_64
 RAM:                 15 GB (Free   3 GB)
 Swap:                 7 GB (Free   7 GB)
@@ -43,7 +43,7 @@ Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
 Work Disk:          963 GB (Free 707 GB)
 Tmp Disk:            69 GB (Free  49 GB)
 
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 set link_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb
 set target_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db}
@@ -61,84 +61,62 @@ Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
 Compiling source file /home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv
+Warning:  /home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv:82: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv:112: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
-Statistics for case statements in always block at line 49 in file
+Statistics for case statements in always block at line 117 in file
 	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            68            |    auto/auto     |
+|           124            |    user/user     |
+|            17            |    user/user     |
+|            93            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 209 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           220            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 306 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           336            |    user/user     |
 ===============================================
 
 Inferred memory devices in process
-	in routine fifo line 49 in file
+	in routine E1000X line 306 in file
 		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|       mem_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    fifo_mem_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Dout_reg       | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   emit_state_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    emit_data_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|    emit_is_k_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 |     wr_ptr_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
 |     rd_ptr_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
-|      used_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|   fifo_count_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Statistics for MUX_OPs
 ======================================================
 | block name/line  | Inputs | Outputs | # sel inputs |
 ======================================================
-|     fifo/32      |   8    |    8    |      3       |
-|     fifo/46      |   8    |    8    |      3       |
+|    E1000X/213    |   8    |    8    |      3       |
 ======================================================
-
-Statistics for case statements in always block at line 226 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           212            |    user/user     |
-|            99            |    auto/auto     |
-|           175            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 361 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           365            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 404 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           407            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine E1000X line 345 in file
-		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      Dout_reg       | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine E1000X line 443 in file
-		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
-===================================================================================
-|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===================================================================================
-| idle_after_k_rd_pos_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|        state_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
-|         rd_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-===================================================================================
 Presto compilation completed successfully.
-Current design is now '/home/019175806@SJSUAD.SJSU.EDU/287/s26/fifo.db:fifo'
-Loaded 3 designs.
-Current design is 'fifo'.
-fifo enc8b10b_core E1000X
+Current design is now '/home/019175806@SJSUAD.SJSU.EDU/287/s26/pcs_8b10b_encode.db:pcs_8b10b_encode'
+Loaded 2 designs.
+Current design is 'pcs_8b10b_encode'.
+pcs_8b10b_encode E1000X
 current_design E1000X
 Current design is 'E1000X'.
 {E1000X}
@@ -173,39 +151,23 @@ check_design
 ****************************************
 check_design summary:
 Version:     V-2023.12-SP5
-Date:        Wed May  6 16:00:25 2026
+Date:        Wed May  6 16:13:57 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Cells                                                               6
+Cells                                                               4
     Cells do not drive (LINT-1)                                     4
-    Connected to power or ground (LINT-32)                          2
-
-Nets                                                                8
-    Unloaded nets (LINT-2)                                          8
 --------------------------------------------------------------------------------
 
-Warning: In design 'fifo', cell 'C453' does not drive any nets. (LINT-1)
-Warning: In design 'fifo', cell 'C455' does not drive any nets. (LINT-1)
-Warning: In design 'fifo', cell 'C466' does not drive any nets. (LINT-1)
-Warning: In design 'fifo', cell 'C467' does not drive any nets. (LINT-1)
-Warning: In design 'E1000X', net 'fifo_next_dout[0]' driven by pin 'u_fifo/next_dout[0]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[1]' driven by pin 'u_fifo/next_dout[1]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[2]' driven by pin 'u_fifo/next_dout[2]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[3]' driven by pin 'u_fifo/next_dout[3]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[4]' driven by pin 'u_fifo/next_dout[4]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[5]' driven by pin 'u_fifo/next_dout[5]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[6]' driven by pin 'u_fifo/next_dout[6]' has no loads. (LINT-2)
-Warning: In design 'E1000X', net 'fifo_next_dout[7]' driven by pin 'u_fifo/next_dout[7]' has no loads. (LINT-2)
-Warning: In design 'E1000X', a pin on submodule 'u_enc0' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rd_in' is connected to logic 0. 
-Warning: In design 'E1000X', a pin on submodule 'u_enc1' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'rd_in' is connected to logic 1. 
+Warning: In design 'E1000X', cell 'C616' does not drive any nets. (LINT-1)
+Warning: In design 'E1000X', cell 'C618' does not drive any nets. (LINT-1)
+Warning: In design 'E1000X', cell 'C629' does not drive any nets. (LINT-1)
+Warning: In design 'E1000X', cell 'C630' does not drive any nets. (LINT-1)
 1
 compile_ultra
 Information: Performing leakage power optimization. (PWR-850)
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Alib files are up-to-date.
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -225,40 +187,37 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 1052                                   |
-| Number of User Hierarchies                              | 3                                      |
-| Sequential Cell Count                                   | 89                                     |
+| Leaf Cell Count                                         | 622                                    |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 97                                     |
 | Macro Count                                             | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 2                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 1                                      |
-| Number of Dont Touch Cells                              | 447                                    |
+| Number of Dont Touch Cells                              | 229                                    |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
 
-Information: There are 14 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
-Information: Uniquified 2 instances of design 'enc8b10b_core'. (OPT-1056)
   Simplifying Design 'E1000X'
 
 Loaded alib file './alib-52/gscl45nm.db.alib'
   Building model 'DW01_NAND2'
-Information: Ungrouping hierarchy u_fifo before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy u_enc0 before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy u_enc1 before Pass 1 (OPT-776)
-Information: Ungrouping 3 of 4 hierarchies before Pass 1 (OPT-775)
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Information: Ungrouping hierarchy u_encoder before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 2 hierarchies before Pass 1 (OPT-775)
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'E1000X'
 Information: Added key list 'DesignWare' to design 'E1000X'. (DDB-72)
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -271,13 +230,13 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:02    1918.5      0.00       0.0     939.6                           7659.4268      0.00  
-    0:00:02    1917.6      0.00       0.0     935.5                           7656.2808      0.00  
+    0:00:01    2075.7      0.00       0.0     892.4                           8539.9824      0.00  
+    0:00:01    2070.6      0.00       0.0     885.2                           8522.4033      0.00  
 
   Beginning Constant Register Removal
   -----------------------------------
-    0:00:02    1917.6      0.00       0.0     935.5                           7656.2808      0.00  
-    0:00:02    1917.6      0.00       0.0     935.5                           7656.2808      0.00  
+    0:00:01    2070.6      0.00       0.0     885.2                           8522.4033      0.00  
+    0:00:01    2070.6      0.00       0.0     885.2                           8522.4033      0.00  
 
   Beginning Global Optimizations
   ------------------------------
@@ -318,39 +277,39 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:02    1901.1      0.00       0.0     918.9                           7309.6797      0.00  
-    0:00:02    1901.1      0.00       0.0     918.9                           7309.6797      0.00  
-    0:00:02    1901.1      0.00       0.0     918.9                           7309.6797      0.00  
-    0:00:02    1901.1      0.00       0.0     918.9                           7309.6797      0.00  
-    0:00:02    1899.7      0.00       0.0     912.6                           7306.2520      0.00  
-    0:00:02    1899.7      0.00       0.0     912.6                           7306.2520      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
 
 
   Beginning Design Rule Fixing  (max_capacitance)
@@ -360,52 +319,52 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:02    1897.8      0.00       0.0     911.5                           7304.4707      0.00  
+    0:00:01    2043.3      0.00       0.0     856.8                           7931.9722      0.00  
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
-    0:00:02    2406.6      0.00       0.0     316.4                           9983.5693      0.00  
-    0:00:02    2406.6      0.00       0.0     316.4                           9983.5693      0.00  
-    0:00:02    2406.6      0.00       0.0     316.4                           9983.5693      0.00  
-    0:00:02    2406.6      0.00       0.0     316.4                           9983.5693      0.00  
-    0:00:02    2406.6      0.00       0.0     316.4                           9983.5693      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
+    0:00:01    2574.6      0.00       0.0     333.8                           10796.7734      0.00  
+    0:00:01    2574.6      0.00       0.0     333.8                           10796.7734      0.00  
+    0:00:01    2574.6      0.00       0.0     333.8                           10796.7734      0.00  
+    0:00:01    2574.6      0.00       0.0     333.8                           10796.7734      0.00  
+    0:00:01    2574.6      0.00       0.0     333.8                           10796.7734      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:02    2403.3      0.00       0.0     319.5                           9890.6260      0.00  
-    0:00:02    2367.1      0.00       0.0     319.5                           9578.0244      0.00  
-    0:00:02    2367.1      0.00       0.0     319.5                           9578.0244      0.00  
-    0:00:02    2367.1      0.00       0.0     319.5                           9578.0244      0.00  
-    0:00:02    2370.0      0.00       0.0     321.2                           9637.0967      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2606.0      0.00       0.0     249.6                           11856.1416      0.00  
-    0:00:03    2601.3      0.00       0.0     252.4                           11771.1895      0.00  
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:01    2556.3      0.00       0.0     342.8                           10447.8359      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.6      0.00       0.0     272.4                           12690.9561      0.00  
+    0:00:02    2764.2      0.00       0.0     272.4                           12682.0059      0.00  
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Loading db file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db'
 
 
@@ -416,7 +375,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   ---------------------
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-CPU Load: 8%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 9%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -451,16 +410,16 @@ Report : timing
         -max_paths 5
 Design : E1000X
 Version: V-2023.12-SP5
-Date   : Wed May  6 16:00:28 2026
+Date   : Wed May  6 16:13:59 2026
 ****************************************
 
 Operating Conditions: typical   Library: gscl45nm
 Wire Load Model Mode: top
 
-  Startpoint: state_reg[2]
+  Startpoint: emit_data_reg[0]
               (rising edge-triggered flip-flop clocked by Clk)
-  Endpoint: Dout_reg[7]
-            (falling edge-triggered flip-flop clocked by Clk)
+  Endpoint: emit_data_reg[2]
+            (rising edge-triggered flip-flop clocked by Clk)
   Path Group: Clk
   Path Type: max
 
@@ -468,70 +427,52 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock Clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  state_reg[2]/CLK (DFFPOSX1)              0.00       0.00 r
-  state_reg[2]/Q (DFFPOSX1)                0.11       0.11 f
-  U1015/Y (INVX1)                          0.05       0.17 r
-  U958/Y (AND2X1)                          0.08       0.24 r
-  U959/Y (AND2X1)                          0.06       0.30 r
-  U1010/Y (AND2X1)                         0.09       0.40 r
-  U1011/Y (INVX1)                          0.06       0.46 f
-  U797/Y (OR2X1)                           0.06       0.52 f
-  U1044/Y (INVX1)                          0.05       0.56 r
-  U1055/Y (AOI22X1)                        0.02       0.59 f
-  U805/Y (BUFX2)                           0.04       0.63 f
-  U1056/Y (NAND3X1)                        0.03       0.66 r
-  U903/Y (BUFX2)                           0.04       0.70 r
-  U795/Y (AND2X1)                          0.13       0.83 r
-  U907/Y (INVX1)                           0.06       0.89 f
-  U791/Y (AND2X1)                          0.07       0.96 f
-  U1124/Y (AOI21X1)                        0.04       1.01 r
-  U915/Y (BUFX2)                           0.04       1.05 r
-  U1127/Y (NAND3X1)                        0.02       1.06 f
-  U870/Y (BUFX2)                           0.04       1.10 f
-  U1128/Y (INVX1)                          0.00       1.10 r
-  U786/Y (AND2X1)                          0.05       1.15 r
-  U952/Y (INVX1)                           0.02       1.17 f
-  U955/Y (NOR2X1)                          0.03       1.20 r
-  U956/Y (INVX1)                           0.02       1.22 f
-  U954/Y (NOR2X1)                          0.03       1.25 r
-  U951/Y (INVX1)                           0.03       1.28 f
-  U950/Y (INVX1)                           0.03       1.31 r
-  U607/Y (OR2X1)                           0.04       1.35 r
-  U608/Y (INVX1)                           0.02       1.36 f
-  U605/Y (INVX1)                           0.00       1.36 r
-  U606/Y (INVX1)                           0.01       1.38 f
-  U965/Y (NOR2X1)                          0.03       1.40 r
-  U964/Y (BUFX2)                           0.05       1.45 r
-  U1143/Y (AOI21X1)                        0.02       1.47 f
-  U593/Y (BUFX2)                           0.03       1.50 f
-  U1144/Y (OAI21X1)                        0.02       1.52 r
-  U1145/Y (AOI22X1)                        0.02       1.54 f
-  U591/Y (BUFX2)                           0.04       1.58 f
-  U524/Y (AND2X1)                          0.04       1.62 f
-  U604/Y (INVX1)                           0.00       1.62 r
-  U602/Y (INVX1)                           0.01       1.63 f
-  U603/Y (INVX1)                           0.00       1.64 r
-  U1146/Y (NAND2X1)                        0.01       1.65 f
-  Dout_reg[7]/D (DFFNEGX1)                 0.00       1.65 f
-  data arrival time                                   1.65
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       0.00 r
+  emit_data_reg[0]/Q (DFFPOSX1)            0.11       0.11 f
+  U1071/Y (NOR2X1)                         0.03       0.15 r
+  U1072/Y (BUFX2)                          0.08       0.23 r
+  U1073/Y (INVX1)                          0.07       0.30 f
+  U965/Y (AND2X1)                          0.10       0.40 f
+  U1078/Y (AOI22X1)                        0.06       0.45 r
+  U934/Y (INVX1)                           0.02       0.48 f
+  U936/Y (NOR2X1)                          0.03       0.50 r
+  U937/Y (INVX1)                           0.02       0.52 f
+  U935/Y (NOR2X1)                          0.03       0.55 r
+  U932/Y (INVX1)                           0.03       0.58 f
+  U1088/Y (NOR3X1)                         0.05       0.62 r
+  U988/Y (INVX1)                           0.03       0.66 f
+  U989/Y (NOR2X1)                          0.03       0.69 r
+  U985/Y (INVX1)                           0.03       0.72 f
+  U984/Y (INVX1)                           0.04       0.76 r
+  U1101/Y (MUX2X1)                         0.05       0.81 f
+  U1108/Y (OAI21X1)                        0.05       0.86 r
+  U1109/Y (AOI21X1)                        0.02       0.88 f
+  U879/Y (BUFX2)                           0.03       0.92 f
+  U959/Y (AND2X1)                          0.03       0.95 f
+  U960/Y (INVX1)                           0.01       0.96 r
+  U1024/Y (OR2X1)                          0.06       1.02 r
+  U587/Y (AND2X1)                          0.04       1.06 r
+  U588/Y (INVX1)                           0.02       1.08 f
+  emit_data_reg[2]/D (DFFPOSX1)            0.00       1.08 f
+  data arrival time                                   1.08
 
-  clock Clk (fall edge)                    3.33       3.33
-  clock network delay (ideal)              0.00       3.33
-  clock uncertainty                       -0.25       3.08
-  Dout_reg[7]/CLK (DFFNEGX1)               0.00       3.08 f
-  library setup time                      -0.25       2.83
-  data required time                                  2.83
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  emit_data_reg[2]/CLK (DFFPOSX1)          0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
   -----------------------------------------------------------
-  data required time                                  2.83
-  data arrival time                                  -1.65
+  data required time                                  6.36
+  data arrival time                                  -1.08
   -----------------------------------------------------------
-  slack (MET)                                         1.18
+  slack (MET)                                         5.28
 
 
-  Startpoint: state_reg[2]
+  Startpoint: emit_data_reg[0]
               (rising edge-triggered flip-flop clocked by Clk)
-  Endpoint: Dout_reg[9]
-            (falling edge-triggered flip-flop clocked by Clk)
+  Endpoint: emit_data_reg[4]
+            (rising edge-triggered flip-flop clocked by Clk)
   Path Group: Clk
   Path Type: max
 
@@ -539,62 +480,106 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock Clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  state_reg[2]/CLK (DFFPOSX1)              0.00       0.00 r
-  state_reg[2]/Q (DFFPOSX1)                0.11       0.11 f
-  U1015/Y (INVX1)                          0.05       0.17 r
-  U958/Y (AND2X1)                          0.08       0.24 r
-  U959/Y (AND2X1)                          0.06       0.30 r
-  U1010/Y (AND2X1)                         0.09       0.40 r
-  U1011/Y (INVX1)                          0.06       0.46 f
-  U797/Y (OR2X1)                           0.06       0.52 f
-  U1044/Y (INVX1)                          0.05       0.56 r
-  U1055/Y (AOI22X1)                        0.02       0.59 f
-  U805/Y (BUFX2)                           0.04       0.63 f
-  U1056/Y (NAND3X1)                        0.03       0.66 r
-  U903/Y (BUFX2)                           0.04       0.70 r
-  U795/Y (AND2X1)                          0.13       0.83 r
-  U907/Y (INVX1)                           0.06       0.89 f
-  U791/Y (AND2X1)                          0.07       0.96 f
-  U1124/Y (AOI21X1)                        0.04       1.01 r
-  U915/Y (BUFX2)                           0.04       1.05 r
-  U1127/Y (NAND3X1)                        0.02       1.06 f
-  U870/Y (BUFX2)                           0.04       1.10 f
-  U1128/Y (INVX1)                          0.00       1.10 r
-  U786/Y (AND2X1)                          0.05       1.15 r
-  U952/Y (INVX1)                           0.02       1.17 f
-  U955/Y (NOR2X1)                          0.03       1.20 r
-  U956/Y (INVX1)                           0.02       1.22 f
-  U954/Y (NOR2X1)                          0.03       1.25 r
-  U951/Y (INVX1)                           0.03       1.28 f
-  U950/Y (INVX1)                           0.03       1.31 r
-  U1151/Y (NAND3X1)                        0.01       1.32 f
-  U917/Y (BUFX2)                           0.04       1.36 f
-  U1152/Y (OAI21X1)                        0.02       1.38 r
-  U1155/Y (AOI22X1)                        0.03       1.41 f
-  U809/Y (BUFX2)                           0.04       1.45 f
-  U1158/Y (NAND3X1)                        0.03       1.48 r
-  U813/Y (BUFX2)                           0.04       1.52 r
-  U1160/Y (OAI21X1)                        0.01       1.53 f
-  Dout_reg[9]/D (DFFNEGX1)                 0.00       1.53 f
-  data arrival time                                   1.53
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       0.00 r
+  emit_data_reg[0]/Q (DFFPOSX1)            0.11       0.11 f
+  U1071/Y (NOR2X1)                         0.03       0.15 r
+  U1072/Y (BUFX2)                          0.08       0.23 r
+  U1073/Y (INVX1)                          0.07       0.30 f
+  U965/Y (AND2X1)                          0.10       0.40 f
+  U1078/Y (AOI22X1)                        0.06       0.45 r
+  U934/Y (INVX1)                           0.02       0.48 f
+  U936/Y (NOR2X1)                          0.03       0.50 r
+  U937/Y (INVX1)                           0.02       0.52 f
+  U935/Y (NOR2X1)                          0.03       0.55 r
+  U932/Y (INVX1)                           0.03       0.58 f
+  U1088/Y (NOR3X1)                         0.05       0.62 r
+  U988/Y (INVX1)                           0.03       0.66 f
+  U989/Y (NOR2X1)                          0.03       0.69 r
+  U985/Y (INVX1)                           0.03       0.72 f
+  U984/Y (INVX1)                           0.04       0.76 r
+  U1101/Y (MUX2X1)                         0.06       0.82 r
+  U1108/Y (OAI21X1)                        0.03       0.86 f
+  U1109/Y (AOI21X1)                        0.02       0.88 r
+  U879/Y (BUFX2)                           0.04       0.91 r
+  U878/Y (INVX1)                           0.02       0.93 f
+  U1166/Y (AOI22X1)                        0.04       0.97 r
+  U692/Y (BUFX2)                           0.03       1.00 r
+  U690/Y (INVX1)                           0.01       1.02 f
+  U691/Y (INVX1)                           0.00       1.02 r
+  U1167/Y (NAND3X1)                        0.02       1.03 f
+  U571/Y (BUFX2)                           0.04       1.07 f
+  emit_data_reg[4]/D (DFFPOSX1)            0.00       1.07 f
+  data arrival time                                   1.07
 
-  clock Clk (fall edge)                    3.33       3.33
-  clock network delay (ideal)              0.00       3.33
-  clock uncertainty                       -0.25       3.08
-  Dout_reg[9]/CLK (DFFNEGX1)               0.00       3.08 f
-  library setup time                      -0.35       2.73
-  data required time                                  2.73
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  emit_data_reg[4]/CLK (DFFPOSX1)          0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
   -----------------------------------------------------------
-  data required time                                  2.73
-  data arrival time                                  -1.53
+  data required time                                  6.36
+  data arrival time                                  -1.07
   -----------------------------------------------------------
-  slack (MET)                                         1.20
+  slack (MET)                                         5.29
 
 
-  Startpoint: state_reg[2]
+  Startpoint: emit_data_reg[0]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: emit_data_reg[0]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       0.00 r
+  emit_data_reg[0]/Q (DFFPOSX1)            0.11       0.11 f
+  U1071/Y (NOR2X1)                         0.03       0.15 r
+  U1072/Y (BUFX2)                          0.08       0.23 r
+  U1073/Y (INVX1)                          0.07       0.30 f
+  U965/Y (AND2X1)                          0.10       0.40 f
+  U1078/Y (AOI22X1)                        0.06       0.45 r
+  U934/Y (INVX1)                           0.02       0.48 f
+  U936/Y (NOR2X1)                          0.03       0.50 r
+  U937/Y (INVX1)                           0.02       0.52 f
+  U935/Y (NOR2X1)                          0.03       0.55 r
+  U932/Y (INVX1)                           0.03       0.58 f
+  U1088/Y (NOR3X1)                         0.05       0.62 r
+  U988/Y (INVX1)                           0.03       0.66 f
+  U989/Y (NOR2X1)                          0.03       0.69 r
+  U985/Y (INVX1)                           0.03       0.72 f
+  U984/Y (INVX1)                           0.04       0.76 r
+  U1101/Y (MUX2X1)                         0.05       0.81 f
+  U1108/Y (OAI21X1)                        0.05       0.86 r
+  U1109/Y (AOI21X1)                        0.02       0.88 f
+  U879/Y (BUFX2)                           0.03       0.92 f
+  U959/Y (AND2X1)                          0.03       0.95 f
+  U960/Y (INVX1)                           0.01       0.96 r
+  U1024/Y (OR2X1)                          0.06       1.02 r
+  U1129/Y (OAI21X1)                        0.02       1.04 f
+  emit_data_reg[0]/D (DFFPOSX1)            0.00       1.04 f
+  data arrival time                                   1.04
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.04
+  -----------------------------------------------------------
+  slack (MET)                                         5.32
+
+
+  Startpoint: emit_data_reg[0]
               (rising edge-triggered flip-flop clocked by Clk)
   Endpoint: Dout_reg[8]
-            (falling edge-triggered flip-flop clocked by Clk)
+            (rising edge-triggered flip-flop clocked by Clk)
   Path Group: Clk
   Path Type: max
 
@@ -602,63 +587,53 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock Clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  state_reg[2]/CLK (DFFPOSX1)              0.00       0.00 r
-  state_reg[2]/Q (DFFPOSX1)                0.11       0.11 f
-  U1015/Y (INVX1)                          0.05       0.17 r
-  U958/Y (AND2X1)                          0.08       0.24 r
-  U959/Y (AND2X1)                          0.06       0.30 r
-  U1010/Y (AND2X1)                         0.09       0.40 r
-  U1011/Y (INVX1)                          0.06       0.46 f
-  U797/Y (OR2X1)                           0.06       0.52 f
-  U1044/Y (INVX1)                          0.05       0.56 r
-  U1055/Y (AOI22X1)                        0.02       0.59 f
-  U805/Y (BUFX2)                           0.04       0.63 f
-  U1056/Y (NAND3X1)                        0.03       0.66 r
-  U903/Y (BUFX2)                           0.04       0.70 r
-  U795/Y (AND2X1)                          0.13       0.83 r
-  U907/Y (INVX1)                           0.06       0.89 f
-  U791/Y (AND2X1)                          0.07       0.96 f
-  U1124/Y (AOI21X1)                        0.04       1.01 r
-  U915/Y (BUFX2)                           0.04       1.05 r
-  U1127/Y (NAND3X1)                        0.02       1.06 f
-  U870/Y (BUFX2)                           0.04       1.10 f
-  U1128/Y (INVX1)                          0.00       1.10 r
-  U786/Y (AND2X1)                          0.05       1.15 r
-  U952/Y (INVX1)                           0.02       1.17 f
-  U955/Y (NOR2X1)                          0.03       1.20 r
-  U956/Y (INVX1)                           0.02       1.22 f
-  U954/Y (NOR2X1)                          0.03       1.25 r
-  U951/Y (INVX1)                           0.03       1.28 f
-  U1149/Y (NAND3X1)                        0.03       1.31 r
-  U873/Y (BUFX2)                           0.04       1.35 r
-  U857/Y (AND2X1)                          0.04       1.39 r
-  U858/Y (INVX1)                           0.02       1.41 f
-  U1390/Y (MUX2X1)                         0.04       1.45 r
-  U1394/Y (AOI22X1)                        0.04       1.49 f
-  U638/Y (BUFX2)                           0.04       1.53 f
-  U636/Y (INVX1)                           0.00       1.53 r
-  U637/Y (INVX1)                           0.01       1.54 f
-  U1395/Y (AND2X1)                         0.04       1.58 f
-  Dout_reg[8]/D (DFFNEGX1)                 0.00       1.58 f
-  data arrival time                                   1.58
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       0.00 r
+  emit_data_reg[0]/Q (DFFPOSX1)            0.11       0.11 f
+  U1071/Y (NOR2X1)                         0.03       0.15 r
+  U1072/Y (BUFX2)                          0.08       0.23 r
+  U1073/Y (INVX1)                          0.07       0.30 f
+  U965/Y (AND2X1)                          0.10       0.40 f
+  U1078/Y (AOI22X1)                        0.06       0.45 r
+  U934/Y (INVX1)                           0.02       0.48 f
+  U936/Y (NOR2X1)                          0.03       0.50 r
+  U937/Y (INVX1)                           0.02       0.52 f
+  U935/Y (NOR2X1)                          0.03       0.55 r
+  U932/Y (INVX1)                           0.03       0.58 f
+  U1088/Y (NOR3X1)                         0.05       0.62 r
+  U988/Y (INVX1)                           0.03       0.66 f
+  U989/Y (NOR2X1)                          0.03       0.69 r
+  U985/Y (INVX1)                           0.03       0.72 f
+  U984/Y (INVX1)                           0.04       0.76 r
+  U1101/Y (MUX2X1)                         0.05       0.81 f
+  U1269/Y (NAND3X1)                        0.04       0.84 r
+  U598/Y (BUFX2)                           0.03       0.88 r
+  U1270/Y (OAI21X1)                        0.01       0.89 f
+  U1271/Y (AOI21X1)                        0.03       0.92 r
+  U650/Y (BUFX2)                           0.03       0.95 r
+  U648/Y (INVX1)                           0.01       0.97 f
+  U649/Y (INVX1)                           0.00       0.97 r
+  U998/Y (AND2X1)                          0.04       1.01 r
+  U999/Y (INVX1)                           0.02       1.03 f
+  Dout_reg[8]/D (DFFPOSX1)                 0.00       1.03 f
+  data arrival time                                   1.03
 
-  clock Clk (fall edge)                    3.33       3.33
-  clock network delay (ideal)              0.00       3.33
-  clock uncertainty                       -0.25       3.08
-  Dout_reg[8]/CLK (DFFNEGX1)               0.00       3.08 f
-  library setup time                      -0.29       2.80
-  data required time                                  2.80
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[8]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
   -----------------------------------------------------------
-  data required time                                  2.80
-  data arrival time                                  -1.58
+  data required time                                  6.36
+  data arrival time                                  -1.03
   -----------------------------------------------------------
-  slack (MET)                                         1.21
+  slack (MET)                                         5.33
 
 
-  Startpoint: state_reg[2]
+  Startpoint: emit_data_reg[0]
               (rising edge-triggered flip-flop clocked by Clk)
-  Endpoint: Dout_reg[6]
-            (falling edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[9]
+            (rising edge-triggered flip-flop clocked by Clk)
   Path Group: Clk
   Path Type: max
 
@@ -666,117 +641,48 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock Clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  state_reg[2]/CLK (DFFPOSX1)              0.00       0.00 r
-  state_reg[2]/Q (DFFPOSX1)                0.11       0.11 f
-  U1015/Y (INVX1)                          0.05       0.17 r
-  U958/Y (AND2X1)                          0.08       0.24 r
-  U959/Y (AND2X1)                          0.06       0.30 r
-  U1010/Y (AND2X1)                         0.09       0.40 r
-  U1011/Y (INVX1)                          0.06       0.46 f
-  U797/Y (OR2X1)                           0.06       0.52 f
-  U1044/Y (INVX1)                          0.05       0.56 r
-  U1055/Y (AOI22X1)                        0.02       0.59 f
-  U805/Y (BUFX2)                           0.04       0.63 f
-  U1056/Y (NAND3X1)                        0.03       0.66 r
-  U903/Y (BUFX2)                           0.04       0.70 r
-  U795/Y (AND2X1)                          0.13       0.83 r
-  U907/Y (INVX1)                           0.06       0.89 f
-  U791/Y (AND2X1)                          0.07       0.96 f
-  U860/Y (AND2X1)                          0.04       1.00 f
-  U891/Y (NOR2X1)                          0.03       1.03 r
-  U889/Y (INVX1)                           0.03       1.06 f
-  U852/Y (OR2X1)                           0.05       1.11 f
-  U947/Y (NOR2X1)                          0.03       1.14 r
-  U945/Y (INVX1)                           0.03       1.17 f
-  U944/Y (INVX1)                           0.05       1.22 r
-  U904/Y (AND2X1)                          0.04       1.25 r
-  U905/Y (INVX1)                           0.03       1.28 f
-  U1384/Y (NAND3X1)                        0.03       1.31 r
-  U831/Y (BUFX2)                           0.04       1.35 r
-  U1385/Y (NAND3X1)                        0.01       1.36 f
-  U832/Y (BUFX2)                           0.03       1.39 f
-  U1386/Y (NAND3X1)                        0.03       1.42 r
-  U663/Y (BUFX2)                           0.03       1.45 r
-  U661/Y (INVX1)                           0.01       1.47 f
-  U662/Y (INVX1)                           0.00       1.47 r
-  U1387/Y (AOI21X1)                        0.01       1.47 f
-  Dout_reg[6]/D (DFFNEGX1)                 0.00       1.47 f
-  data arrival time                                   1.47
+  emit_data_reg[0]/CLK (DFFPOSX1)          0.00       0.00 r
+  emit_data_reg[0]/Q (DFFPOSX1)            0.11       0.11 f
+  U1071/Y (NOR2X1)                         0.03       0.15 r
+  U1072/Y (BUFX2)                          0.08       0.23 r
+  U1073/Y (INVX1)                          0.07       0.30 f
+  U965/Y (AND2X1)                          0.10       0.40 f
+  U1078/Y (AOI22X1)                        0.06       0.45 r
+  U934/Y (INVX1)                           0.02       0.48 f
+  U936/Y (NOR2X1)                          0.03       0.50 r
+  U937/Y (INVX1)                           0.02       0.52 f
+  U935/Y (NOR2X1)                          0.03       0.55 r
+  U932/Y (INVX1)                           0.03       0.58 f
+  U1088/Y (NOR3X1)                         0.05       0.62 r
+  U988/Y (INVX1)                           0.03       0.66 f
+  U989/Y (NOR2X1)                          0.03       0.69 r
+  U985/Y (INVX1)                           0.03       0.72 f
+  U984/Y (INVX1)                           0.04       0.76 r
+  U1260/Y (OAI21X1)                        0.02       0.78 f
+  U1273/Y (NAND3X1)                        0.03       0.81 r
+  U792/Y (BUFX2)                           0.04       0.85 r
+  U1275/Y (AOI22X1)                        0.03       0.88 f
+  U667/Y (BUFX2)                           0.04       0.91 f
+  U665/Y (INVX1)                           0.00       0.91 r
+  U666/Y (INVX1)                           0.01       0.92 f
+  U1276/Y (AOI21X1)                        0.02       0.94 r
+  U783/Y (BUFX2)                           0.03       0.98 r
+  U1277/Y (AOI21X1)                        0.01       0.99 f
+  U581/Y (BUFX2)                           0.03       1.02 f
+  Dout_reg[9]/D (DFFPOSX1)                 0.00       1.02 f
+  data arrival time                                   1.02
 
-  clock Clk (fall edge)                    3.33       3.33
-  clock network delay (ideal)              0.00       3.33
-  clock uncertainty                       -0.25       3.08
-  Dout_reg[6]/CLK (DFFNEGX1)               0.00       3.08 f
-  library setup time                      -0.29       2.80
-  data required time                                  2.80
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[9]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.05       6.36
+  data required time                                  6.36
   -----------------------------------------------------------
-  data required time                                  2.80
-  data arrival time                                  -1.47
+  data required time                                  6.36
+  data arrival time                                  -1.02
   -----------------------------------------------------------
-  slack (MET)                                         1.32
-
-
-  Startpoint: state_reg[2]
-              (rising edge-triggered flip-flop clocked by Clk)
-  Endpoint: Dout_reg[4]
-            (falling edge-triggered flip-flop clocked by Clk)
-  Path Group: Clk
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock Clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  state_reg[2]/CLK (DFFPOSX1)              0.00       0.00 r
-  state_reg[2]/Q (DFFPOSX1)                0.11       0.11 f
-  U1015/Y (INVX1)                          0.05       0.17 r
-  U958/Y (AND2X1)                          0.08       0.24 r
-  U959/Y (AND2X1)                          0.06       0.30 r
-  U1010/Y (AND2X1)                         0.09       0.40 r
-  U1011/Y (INVX1)                          0.06       0.46 f
-  U797/Y (OR2X1)                           0.06       0.52 f
-  U1077/Y (AOI21X1)                        0.02       0.54 r
-  U674/Y (BUFX2)                           0.03       0.57 r
-  U672/Y (INVX1)                           0.01       0.59 f
-  U673/Y (INVX1)                           0.00       0.59 r
-  U1078/Y (OR2X1)                          0.05       0.64 r
-  U1079/Y (NOR3X1)                         0.04       0.68 f
-  U1080/Y (INVX1)                          0.03       0.71 r
-  U966/Y (AND2X1)                          0.06       0.76 r
-  U967/Y (INVX1)                           0.04       0.81 f
-  U865/Y (OR2X1)                           0.04       0.85 f
-  U866/Y (INVX1)                           0.01       0.86 r
-  U792/Y (AND2X1)                          0.05       0.91 r
-  U1124/Y (AOI21X1)                        0.02       0.93 f
-  U915/Y (BUFX2)                           0.04       0.97 f
-  U1127/Y (NAND3X1)                        0.03       1.00 r
-  U870/Y (BUFX2)                           0.04       1.04 r
-  U1128/Y (INVX1)                          0.02       1.06 f
-  U786/Y (AND2X1)                          0.05       1.10 f
-  U1356/Y (NAND3X1)                        0.04       1.14 r
-  U654/Y (BUFX2)                           0.03       1.17 r
-  U652/Y (INVX1)                           0.01       1.19 f
-  U653/Y (INVX1)                           0.00       1.19 r
-  U1357/Y (AOI21X1)                        0.01       1.20 f
-  U766/Y (BUFX2)                           0.03       1.23 f
-  U764/Y (INVX1)                           0.00       1.23 r
-  U765/Y (INVX1)                           0.01       1.24 f
-  U1358/Y (OAI21X1)                        0.04       1.28 r
-  U1359/Y (AOI21X1)                        0.02       1.30 f
-  Dout_reg[4]/D (DFFNEGX1)                 0.00       1.30 f
-  data arrival time                                   1.30
-
-  clock Clk (fall edge)                    3.33       3.33
-  clock network delay (ideal)              0.00       3.33
-  clock uncertainty                       -0.25       3.08
-  Dout_reg[4]/CLK (DFFNEGX1)               0.00       3.08 f
-  library setup time                      -0.29       2.80
-  data required time                                  2.80
-  -----------------------------------------------------------
-  data required time                                  2.80
-  data arrival time                                  -1.30
-  -----------------------------------------------------------
-  slack (MET)                                         1.49
+  slack (MET)                                         5.34
 
 
 1
@@ -785,8 +691,8 @@ Writing verilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X_gates.v'.
 1
 quit
 
-Memory usage for this session 133 Mbytes.
-Memory usage for this session including child processes 133 Mbytes.
+Memory usage for this session 132 Mbytes.
+Memory usage for this session including child processes 132 Mbytes.
 CPU usage for this session 3 seconds ( 0.00 hours ).
 Elapsed time for this session 5 seconds ( 0.00 hours ).
 
