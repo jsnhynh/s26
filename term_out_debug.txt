@@ -11,7 +11,7 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   Please refer to release notes for information on supported platforms.
 
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed May  6 16:07:13 2026
+         Version U-2023.03-SP2-8 -- Wed May  6 16:10:06 2026
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -45,33 +45,188 @@ Both modules done.
 /bin/ld: warning: creating DT_TEXTREL in a shared object
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _248381_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _249704_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: .340 seconds to compile + .415 seconds to elab + .207 seconds to link
+CPU time: .395 seconds to compile + .666 seconds to elab + .206 seconds to link
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 16:07 2026
-Error: "tbs26.svp", 61: tb.ckDr: at time 50000 ps
-Received 17c -- expected 289 curdisp  1 @50.00 ns
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 16:10 2026
+Error: "tbs26.svp", 61: tb.ckDr: at time 40000 ps
+Received 289 -- expected 17c curdisp -1 @ 40.0 ns
 tpkt has  35 expected results
-Error: "tbs26.svp", 61: tb.ckDr: at time 60000 ps
-Received 289 -- expected 17c curdisp -1 @ 60.0 ns
-Error: "tbs26.svp", 61: tb.ckDr: at time 70000 ps
-Received 17c -- expected 289 curdisp  1 @70.00 ns
-Error: "tbs26.svp", 61: tb.ckDr: at time 80000 ps
-Received 289 -- expected 17c curdisp -1 @ 80.0 ns
-Error: "tbs26.svp", 61: tb.ckDr: at time 90000 ps
-Received 05b -- expected 289 curdisp  1 @90.00 ns
-Fatal: "tbs26.svp", 61: tb.ckDr: at time 90000 ps
-          5 errors seen, stopping simulation
+tpkt has  48 expected results
+tpkt has  51 expected results
+tpkt has  56 expected results
+tpkt has   5 expected results
+tpkt has  50 expected results
+tpkt has  50 expected results
+tpkt has  34 expected results
+tpkt has  15 expected results
+tpkt has  10 expected results
+tpkt has   5 expected results
+tpkt has  18 expected results
+tpkt has  29 expected results
+tpkt has  49 expected results
+tpkt has  15 expected results
+tpkt has  26 expected results
+tpkt has  44 expected results
+tpkt has  50 expected results
+tpkt has  11 expected results
+tpkt has   8 expected results
+tpkt has  48 expected results
+tpkt has  51 expected results
+tpkt has  46 expected results
+tpkt has   7 expected results
+tpkt has   8 expected results
+tpkt has   7 expected results
+tpkt has  12 expected results
+tpkt has  17 expected results
+tpkt has  42 expected results
+tpkt has  30 expected results
+tpkt has  32 expected results
+tpkt has  16 expected results
+tpkt has  30 expected results
+tpkt has  58 expected results
+tpkt has  47 expected results
+tpkt has  25 expected results
+tpkt has  31 expected results
+tpkt has  55 expected results
+tpkt has  11 expected results
+tpkt has  56 expected results
+tpkt has   5 expected results
+tpkt has  19 expected results
+tpkt has  57 expected results
+tpkt has   5 expected results
+tpkt has  50 expected results
+tpkt has  50 expected results
+tpkt has  20 expected results
+tpkt has  32 expected results
+tpkt has  47 expected results
+tpkt has  42 expected results
+tpkt has  33 expected results
+tpkt has  58 expected results
+tpkt has  23 expected results
+tpkt has  48 expected results
+tpkt has  42 expected results
+tpkt has  21 expected results
+tpkt has   4 expected results
+tpkt has  21 expected results
+tpkt has  35 expected results
+tpkt has   7 expected results
+tpkt has  55 expected results
+tpkt has  60 expected results
+tpkt has  40 expected results
+tpkt has  58 expected results
+tpkt has  38 expected results
+tpkt has  32 expected results
+tpkt has  27 expected results
+tpkt has  35 expected results
+tpkt has  15 expected results
+tpkt has  33 expected results
+tpkt has  35 expected results
+tpkt has  25 expected results
+tpkt has   4 expected results
+tpkt has  48 expected results
+tpkt has  15 expected results
+tpkt has  54 expected results
+tpkt has  10 expected results
+tpkt has  23 expected results
+tpkt has  20 expected results
+tpkt has  43 expected results
+tpkt has  18 expected results
+tpkt has   4 expected results
+tpkt has  33 expected results
+tpkt has  27 expected results
+tpkt has  40 expected results
+tpkt has  32 expected results
+tpkt has   8 expected results
+tpkt has  42 expected results
+tpkt has  19 expected results
+tpkt has  47 expected results
+tpkt has  32 expected results
+tpkt has  40 expected results
+tpkt has  17 expected results
+tpkt has  20 expected results
+tpkt has  24 expected results
+tpkt has  38 expected results
+tpkt has  10 expected results
+tpkt has  29 expected results
+tpkt has  22 expected results
+tpkt has  51 expected results
+tpkt has  49 expected results
+tpkt has 6362 expected results
+tpkt has 3001 expected results
+tpkt has 4264 expected results
+tpkt has 5400 expected results
+tpkt has 2794 expected results
+tpkt has 6418 expected results
+tpkt has 2342 expected results
+tpkt has 5630 expected results
+tpkt has 4017 expected results
+tpkt has 2176 expected results
+tpkt has 6300 expected results
+tpkt has 6498 expected results
+tpkt has 3448 expected results
+tpkt has 5859 expected results
+tpkt has 3092 expected results
+tpkt has 2460 expected results
+tpkt has 5223 expected results
+tpkt has 2236 expected results
+tpkt has 2966 expected results
+tpkt has 3070 expected results
+tpkt has 6281 expected results
+tpkt has 3137 expected results
+tpkt has 4172 expected results
+tpkt has 4937 expected results
+tpkt has 4032 expected results
+tpkt has 2220 expected results
+tpkt has 6059 expected results
+tpkt has 6128 expected results
+tpkt has 2217 expected results
+tpkt has 4073 expected results
+tpkt has 6334 expected results
+tpkt has 2639 expected results
+tpkt has 2636 expected results
+tpkt has 3944 expected results
+tpkt has 5270 expected results
+tpkt has 4944 expected results
+tpkt has 3454 expected results
+tpkt has 5418 expected results
+tpkt has 3919 expected results
+tpkt has 4765 expected results
+tpkt has 5952 expected results
+tpkt has 4939 expected results
+tpkt has 3617 expected results
+tpkt has 5609 expected results
+tpkt has 6215 expected results
+tpkt has 5026 expected results
+tpkt has 2628 expected results
+tpkt has 3721 expected results
+tpkt has 3917 expected results
+tpkt has 3114 expected results
+tpkt has 5088 expected results
+tpkt has 3158 expected results
+tpkt has 6177 expected results
+tpkt has 2992 expected results
+tpkt has 3475 expected results
+tpkt has 5624 expected results
+tpkt has 5092 expected results
+tpkt has 3429 expected results
+tpkt has 4649 expected results
+tpkt has 6165 expected results
+
+
+I'm sorry, the simulation didn't work
+
+
 $finish called from file "tbs26.svp", line 61.
-$finish at simulation time                90000
+$finish at simulation time           2667511000
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 90000 ps
-CPU Time:      0.550 seconds;       Data structure size:   0.0Mb
-Wed May  6 16:07:16 2026
-Error: "tbs26.svp", 61: tb.ckDr: at time 50000 ps
+Time: 2667511000 ps
+CPU Time:      0.850 seconds;       Data structure size:   0.0Mb
+Wed May  6 16:10:09 2026
+Error: "tbs26.svp", 61: tb.ckDr: at time 40000 ps
 VCS simulation failed
 
