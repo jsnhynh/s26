@@ -1,0 +1,1284 @@
+rm: cannot remove 'simv.daidir/.nfs00000000027e2dc1000012cb': Device or resource busy
+rm: cannot remove 'simv.daidir/.nfs00000000027e2de8000012ca': Device or resource busy
+rm: cannot remove 'simv.daidir/.nfs00000000027e2dc1000012cb': Device or resource busy
+rm: cannot remove 'simv.daidir/.nfs00000000027e2de8000012ca': Device or resource busy
+019175806
+019175806
+Namespace(resultsFileName='results.txt', gate_vcd=True, gate_vcd_file='s26p287_gate_500_560.vcd', gate_dump_start_ns=500, gate_dump_stop_ns=560, gate_dump_limit_bytes=500000000)
+clock period 6.666666666666667ns
+/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/bin/vcs: line 3860: lsb_release: command not found
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Red Hat Enterprise Linux release 9.7 (Plow)' is not supported
+  on 'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+                         Chronologic VCS (TM)
+         Version U-2023.03-SP2-8 -- Wed May  6 15:17:55 2026
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tbs26.svp'
+Parsing included file 'E1000X.sv'.
+Back to file 'tbs26.svp'.
+Top Level Modules:
+       tb
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+
+3 modules and 0 UDP read.
+recompiling module tb
+recompiling module enc8b10b_core
+recompiling module E1000X
+All of 3 modules done
+/bin/ld: rmapats_mop.o: warning: relocation against `HsimLongLong2Int' in read-only section `.text'
+/bin/ld: warning: creating DT_TEXTREL in a shared object
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _226318_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .402 seconds to compile + .630 seconds to elab + .194 seconds to link
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:17 2026
+tpkt has  35 expected results
+tpkt has  48 expected results
+tpkt has  51 expected results
+tpkt has  56 expected results
+tpkt has   5 expected results
+tpkt has  50 expected results
+tpkt has  50 expected results
+tpkt has  34 expected results
+tpkt has  15 expected results
+tpkt has  10 expected results
+tpkt has   5 expected results
+tpkt has  18 expected results
+tpkt has  29 expected results
+tpkt has  49 expected results
+tpkt has  15 expected results
+tpkt has  26 expected results
+tpkt has  44 expected results
+tpkt has  50 expected results
+tpkt has  11 expected results
+tpkt has   8 expected results
+tpkt has  48 expected results
+tpkt has  51 expected results
+tpkt has  46 expected results
+tpkt has   7 expected results
+tpkt has   8 expected results
+tpkt has   7 expected results
+tpkt has  12 expected results
+tpkt has  17 expected results
+tpkt has  42 expected results
+tpkt has  30 expected results
+tpkt has  32 expected results
+tpkt has  16 expected results
+tpkt has  30 expected results
+tpkt has  58 expected results
+tpkt has  47 expected results
+tpkt has  25 expected results
+tpkt has  31 expected results
+tpkt has  55 expected results
+tpkt has  11 expected results
+tpkt has  56 expected results
+tpkt has   5 expected results
+tpkt has  19 expected results
+tpkt has  57 expected results
+tpkt has   5 expected results
+tpkt has  50 expected results
+tpkt has  50 expected results
+tpkt has  20 expected results
+tpkt has  32 expected results
+tpkt has  47 expected results
+tpkt has  42 expected results
+tpkt has  33 expected results
+tpkt has  58 expected results
+tpkt has  23 expected results
+tpkt has  48 expected results
+tpkt has  42 expected results
+tpkt has  21 expected results
+tpkt has   4 expected results
+tpkt has  21 expected results
+tpkt has  35 expected results
+tpkt has   7 expected results
+tpkt has  55 expected results
+tpkt has  60 expected results
+tpkt has  40 expected results
+tpkt has  58 expected results
+tpkt has  38 expected results
+tpkt has  32 expected results
+tpkt has  27 expected results
+tpkt has  35 expected results
+tpkt has  15 expected results
+tpkt has  33 expected results
+tpkt has  35 expected results
+tpkt has  25 expected results
+tpkt has   4 expected results
+tpkt has  48 expected results
+tpkt has  15 expected results
+tpkt has  54 expected results
+tpkt has  10 expected results
+tpkt has  23 expected results
+tpkt has  20 expected results
+tpkt has  43 expected results
+tpkt has  18 expected results
+tpkt has   4 expected results
+tpkt has  33 expected results
+tpkt has  27 expected results
+tpkt has  40 expected results
+tpkt has  32 expected results
+tpkt has   8 expected results
+tpkt has  42 expected results
+tpkt has  19 expected results
+tpkt has  47 expected results
+tpkt has  32 expected results
+tpkt has  40 expected results
+tpkt has  17 expected results
+tpkt has  20 expected results
+tpkt has  24 expected results
+tpkt has  38 expected results
+tpkt has  10 expected results
+tpkt has  29 expected results
+tpkt has  22 expected results
+tpkt has  51 expected results
+tpkt has  49 expected results
+tpkt has 6362 expected results
+tpkt has 3001 expected results
+tpkt has 4264 expected results
+tpkt has 5400 expected results
+tpkt has 2794 expected results
+tpkt has 6418 expected results
+tpkt has 2342 expected results
+tpkt has 5630 expected results
+tpkt has 4017 expected results
+tpkt has 2176 expected results
+tpkt has 6300 expected results
+tpkt has 6498 expected results
+tpkt has 3448 expected results
+tpkt has 5859 expected results
+tpkt has 3092 expected results
+tpkt has 2460 expected results
+tpkt has 5223 expected results
+tpkt has 2236 expected results
+tpkt has 2966 expected results
+tpkt has 3070 expected results
+tpkt has 6281 expected results
+tpkt has 3137 expected results
+tpkt has 4172 expected results
+tpkt has 4937 expected results
+tpkt has 4032 expected results
+tpkt has 2220 expected results
+tpkt has 6059 expected results
+tpkt has 6128 expected results
+tpkt has 2217 expected results
+tpkt has 4073 expected results
+tpkt has 6334 expected results
+tpkt has 2639 expected results
+tpkt has 2636 expected results
+tpkt has 3944 expected results
+tpkt has 5270 expected results
+tpkt has 4944 expected results
+tpkt has 3454 expected results
+tpkt has 5418 expected results
+tpkt has 3919 expected results
+tpkt has 4765 expected results
+tpkt has 5952 expected results
+tpkt has 4939 expected results
+tpkt has 3617 expected results
+tpkt has 5609 expected results
+tpkt has 6215 expected results
+tpkt has 5026 expected results
+tpkt has 2628 expected results
+tpkt has 3721 expected results
+tpkt has 3917 expected results
+tpkt has 3114 expected results
+tpkt has 5088 expected results
+tpkt has 3158 expected results
+tpkt has 6177 expected results
+tpkt has 2992 expected results
+tpkt has 3475 expected results
+tpkt has 5624 expected results
+tpkt has 5092 expected results
+tpkt has 3429 expected results
+tpkt has 4649 expected results
+tpkt has 6165 expected results
+
+
+
+It ran OK I think
+
+
+
+$finish called from file "tbs26.svp", line 61.
+$finish at simulation time           2667511000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2667511000 ps
+CPU Time:      1.010 seconds;       Data structure size:   0.0Mb
+Wed May  6 15:17:59 2026
+It ran OK I think
+Preserved RTL VCD as s26p287_rtl_debug.vcd
+
+
+
+VCS simulation worked
+
+
+/home/019175806@SJSUAD.SJSU.EDU/287/s26
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version V-2023.12-SP5 for linux64 - Jul 16, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Wed May  6 15:18:03 2026
+Hostname:           coe-ee-cad2.sjsuad.sjsu.edu
+CPU Model:          Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 2.57 GHz
+OS:                 Linux 5.14.0-611.16.1.el9_7.x86_64
+RAM:                 15 GB (Free   3 GB)
+Swap:                 7 GB (Free   7 GB)
+Work Filesystem:    /home/019175806@SJSUAD.SJSU.EDU mounted to coe-ee-pool.sjsuad.sjsu.edu:/export/users/019175806
+Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
+Work Disk:          963 GB (Free 707 GB)
+Tmp Disk:            69 GB (Free  49 GB)
+
+CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+set link_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
+/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb
+set target_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db}
+/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db
+suppress_message { UID-401 VER-130 }
+read_sverilog E1000X.sv
+Loading db file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+Loading db file '/apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/dc_compiler_2023_V/syn/V-2023.12-SP5/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/dc_compiler_2023_V/syn/V-2023.12-SP5/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Loading sverilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv
+
+Statistics for case statements in always block at line 49 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            68            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine fifo line 49 in file
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_ptr_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     rd_ptr_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|      used_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     fifo/32      |   8    |    8    |      3       |
+|     fifo/46      |   8    |    8    |      3       |
+======================================================
+
+Statistics for case statements in always block at line 226 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           212            |    user/user     |
+|            99            |    auto/auto     |
+|           175            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 367 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           370            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 430 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           434            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 473 in file
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           476            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine E1000X line 405 in file
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Dout_reg       | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine E1000X line 512 in file
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| idle_after_k_rd_pos_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        state_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|         rd_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+Presto compilation completed successfully.
+Current design is now '/home/019175806@SJSUAD.SJSU.EDU/287/s26/fifo.db:fifo'
+Loaded 3 designs.
+Current design is 'fifo'.
+fifo enc8b10b_core E1000X
+current_design E1000X
+Current design is 'E1000X'.
+{E1000X}
+create_clock Clk -name Clk -period 4.667
+1
+set_propagated_clock Clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 Clk
+1
+set_propagated_clock Clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.3 -clock Clk [all_outputs]
+1
+set all_inputs_wo_rst_Clk [remove_from_collection [remove_from_collection [all_inputs] [get_port Clk]] [get_port Reset]]
+{TX_EN Din[7] Din[6] Din[5] Din[4] Din[3] Din[2] Din[1] Din[0]}
+set_driving_cell -lib_cell NAND2X1 $all_inputs_wo_rst_Clk
+1
+set_input_delay 0.4 -clock Clk $all_inputs_wo_rst_Clk
+1
+set_output_delay 0.4 -clock Clk [all_outputs]
+1
+set_fix_hold [ get_clocks Clk ]
+1
+set_output_delay 0.3 -clock Clk [all_outputs]
+1
+set_max_delay 4.667 -from [all_inputs] -to [all_outputs]
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12-SP5
+Date:        Wed May  6 15:18:03 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               8
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                          4
+
+Nets                                                               20
+    Unloaded nets (LINT-2)                                         20
+--------------------------------------------------------------------------------
+
+Warning: In design 'fifo', cell 'C453' does not drive any nets. (LINT-1)
+Warning: In design 'fifo', cell 'C455' does not drive any nets. (LINT-1)
+Warning: In design 'fifo', cell 'C466' does not drive any nets. (LINT-1)
+Warning: In design 'fifo', cell 'C467' does not drive any nets. (LINT-1)
+Warning: In design 'E1000X', net 'enc_code_rd1[0]' driven by pin 'u_enc1/code[0]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[1]' driven by pin 'u_enc1/code[1]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[2]' driven by pin 'u_enc1/code[2]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[3]' driven by pin 'u_enc1/code[3]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[4]' driven by pin 'u_enc1/code[4]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[5]' driven by pin 'u_enc1/code[5]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[6]' driven by pin 'u_enc1/code[6]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[7]' driven by pin 'u_enc1/code[7]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[8]' driven by pin 'u_enc1/code[8]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd1[9]' driven by pin 'u_enc1/code[9]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[0]' driven by pin 'u_enc0/code[0]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[1]' driven by pin 'u_enc0/code[1]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[2]' driven by pin 'u_enc0/code[2]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[3]' driven by pin 'u_enc0/code[3]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[4]' driven by pin 'u_enc0/code[4]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[5]' driven by pin 'u_enc0/code[5]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[6]' driven by pin 'u_enc0/code[6]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[7]' driven by pin 'u_enc0/code[7]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[8]' driven by pin 'u_enc0/code[8]' has no loads. (LINT-2)
+Warning: In design 'E1000X', net 'enc_code_rd0[9]' driven by pin 'u_enc0/code[9]' has no loads. (LINT-2)
+Warning: In design 'E1000X', a pin on submodule 'u_enc0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rd_in' is connected to logic 0. 
+Warning: In design 'E1000X', a pin on submodule 'u_enc1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rd_in' is connected to logic 1. 
+Warning: In design 'E1000X', a pin on submodule 'u_enc_la0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rd_in' is connected to logic 0. 
+Warning: In design 'E1000X', a pin on submodule 'u_enc_la1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'rd_in' is connected to logic 1. 
+1
+compile_ultra
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | V-2023.12-DWBB_202312.5 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1863                                   |
+| Number of User Hierarchies                              | 5                                      |
+| Sequential Cell Count                                   | 89                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 849                                    |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 28 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 4 instances of design 'enc8b10b_core'. (OPT-1056)
+  Simplifying Design 'E1000X'
+
+Loaded alib file './alib-52/gscl45nm.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u_fifo before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_enc0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_enc_la1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_enc_la0 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_enc1 before Pass 1 (OPT-776)
+Information: Ungrouping 5 of 6 hierarchies before Pass 1 (OPT-775)
+CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'E1000X'
+Information: Added key list 'DesignWare' to design 'E1000X'. (DDB-72)
+CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design E1000X. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:03    2880.6      0.00       0.0     313.4                           12720.0430      0.00  
+CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Loading db file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+create_clock Clk -name Clk -period 6.667
+1
+update_timing
+Information: Updating design information... (UID-85)
+1
+report_timing -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : E1000X
+Version: V-2023.12-SP5
+Date   : Wed May  6 15:18:07 2026
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[6]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[1]/CLK (DFFPOSX1)              0.00       0.00 r
+  state_reg[1]/Q (DFFPOSX1)                0.11       0.11 f
+  U1143/Y (INVX1)                          0.03       0.14 r
+  U1049/Y (OR2X1)                          0.05       0.19 r
+  U1050/Y (INVX1)                          0.03       0.21 f
+  U1088/Y (AND2X1)                         0.04       0.26 f
+  U1117/Y (AND2X1)                         0.05       0.31 f
+  U1118/Y (INVX1)                          0.07       0.38 r
+  U1119/Y (OR2X1)                          0.09       0.46 r
+  U1162/Y (INVX1)                          0.05       0.51 f
+  U1167/Y (AOI22X1)                        0.05       0.57 r
+  U977/Y (BUFX2)                           0.04       0.61 r
+  U1169/Y (OR2X1)                          0.06       0.66 r
+  U1170/Y (AOI21X1)                        0.03       0.69 f
+  U1012/Y (BUFX2)                          0.04       0.73 f
+  U1183/Y (AOI21X1)                        0.03       0.76 r
+  U854/Y (BUFX2)                           0.03       0.79 r
+  U852/Y (INVX1)                           0.01       0.81 f
+  U853/Y (INVX1)                           0.00       0.81 r
+  U1184/Y (MUX2X1)                         0.02       0.83 f
+  U1185/Y (AOI21X1)                        0.02       0.85 r
+  U1100/Y (BUFX2)                          0.05       0.90 r
+  U1207/YS (FAX1)                          0.15       1.04 r
+  U1208/Y (INVX1)                          0.06       1.11 f
+  U1065/Y (AND2X1)                         0.06       1.17 f
+  U1276/Y (OAI21X1)                        0.08       1.24 r
+  U1284/Y (AND2X1)                         0.05       1.30 r
+  U932/Y (AND2X1)                          0.06       1.36 r
+  U933/Y (INVX1)                           0.03       1.39 f
+  U978/Y (AND2X1)                          0.04       1.43 f
+  U979/Y (INVX1)                           0.01       1.44 r
+  U1021/Y (AND2X1)                         0.04       1.48 r
+  U1022/Y (INVX1)                          0.03       1.51 f
+  U1293/Y (NAND3X1)                        0.03       1.55 r
+  U1009/Y (BUFX2)                          0.04       1.58 r
+  U987/Y (OR2X1)                           0.05       1.63 r
+  U988/Y (INVX1)                           0.02       1.66 f
+  U683/Y (AND2X1)                          0.03       1.69 f
+  U684/Y (INVX1)                           0.00       1.69 r
+  U1298/Y (AOI21X1)                        0.01       1.70 f
+  U1110/Y (BUFX2)                          0.04       1.74 f
+  U1111/Y (AND2X1)                         0.05       1.79 f
+  U1345/Y (AOI22X1)                        0.03       1.82 r
+  U634/Y (BUFX2)                           0.04       1.86 r
+  U1346/Y (OAI21X1)                        0.01       1.87 f
+  U1347/Y (AOI22X1)                        0.02       1.89 r
+  U651/Y (BUFX2)                           0.04       1.93 r
+  U1348/Y (NAND2X1)                        0.01       1.94 f
+  Dout_reg[6]/D (DFFPOSX1)                 0.00       1.94 f
+  data arrival time                                   1.94
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[6]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.94
+  -----------------------------------------------------------
+  slack (MET)                                         4.42
+
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[7]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[1]/CLK (DFFPOSX1)              0.00       0.00 r
+  state_reg[1]/Q (DFFPOSX1)                0.11       0.11 f
+  U1143/Y (INVX1)                          0.03       0.14 r
+  U1049/Y (OR2X1)                          0.05       0.19 r
+  U1050/Y (INVX1)                          0.03       0.21 f
+  U1088/Y (AND2X1)                         0.04       0.26 f
+  U1117/Y (AND2X1)                         0.05       0.31 f
+  U1118/Y (INVX1)                          0.07       0.38 r
+  U1119/Y (OR2X1)                          0.09       0.46 r
+  U1162/Y (INVX1)                          0.05       0.51 f
+  U1167/Y (AOI22X1)                        0.05       0.57 r
+  U977/Y (BUFX2)                           0.04       0.61 r
+  U1169/Y (OR2X1)                          0.06       0.66 r
+  U1170/Y (AOI21X1)                        0.03       0.69 f
+  U1012/Y (BUFX2)                          0.04       0.73 f
+  U1183/Y (AOI21X1)                        0.03       0.76 r
+  U854/Y (BUFX2)                           0.03       0.79 r
+  U852/Y (INVX1)                           0.01       0.81 f
+  U853/Y (INVX1)                           0.00       0.81 r
+  U1184/Y (MUX2X1)                         0.02       0.83 f
+  U1185/Y (AOI21X1)                        0.02       0.85 r
+  U1100/Y (BUFX2)                          0.05       0.90 r
+  U1207/YS (FAX1)                          0.15       1.04 r
+  U1208/Y (INVX1)                          0.06       1.11 f
+  U1065/Y (AND2X1)                         0.06       1.17 f
+  U1276/Y (OAI21X1)                        0.08       1.24 r
+  U1284/Y (AND2X1)                         0.05       1.30 r
+  U932/Y (AND2X1)                          0.06       1.36 r
+  U933/Y (INVX1)                           0.03       1.39 f
+  U978/Y (AND2X1)                          0.04       1.43 f
+  U979/Y (INVX1)                           0.01       1.44 r
+  U1021/Y (AND2X1)                         0.04       1.48 r
+  U1022/Y (INVX1)                          0.03       1.51 f
+  U1293/Y (NAND3X1)                        0.03       1.55 r
+  U1009/Y (BUFX2)                          0.04       1.58 r
+  U987/Y (OR2X1)                           0.05       1.63 r
+  U988/Y (INVX1)                           0.02       1.66 f
+  U683/Y (AND2X1)                          0.03       1.69 f
+  U684/Y (INVX1)                           0.00       1.69 r
+  U1298/Y (AOI21X1)                        0.01       1.70 f
+  U1110/Y (BUFX2)                          0.04       1.74 f
+  U1386/Y (AOI22X1)                        0.03       1.77 r
+  U1046/Y (BUFX2)                          0.04       1.81 r
+  U1391/Y (OAI21X1)                        0.02       1.83 f
+  U1392/Y (AOI22X1)                        0.04       1.86 r
+  U663/Y (BUFX2)                           0.04       1.90 r
+  U1393/Y (NAND2X1)                        0.01       1.91 f
+  Dout_reg[7]/D (DFFPOSX1)                 0.00       1.91 f
+  data arrival time                                   1.91
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[7]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.91
+  -----------------------------------------------------------
+  slack (MET)                                         4.45
+
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[9]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[1]/CLK (DFFPOSX1)              0.00       0.00 r
+  state_reg[1]/Q (DFFPOSX1)                0.11       0.11 f
+  U1143/Y (INVX1)                          0.03       0.14 r
+  U1049/Y (OR2X1)                          0.05       0.19 r
+  U1050/Y (INVX1)                          0.03       0.21 f
+  U1088/Y (AND2X1)                         0.04       0.26 f
+  U1117/Y (AND2X1)                         0.05       0.31 f
+  U1118/Y (INVX1)                          0.07       0.38 r
+  U1119/Y (OR2X1)                          0.09       0.46 r
+  U1162/Y (INVX1)                          0.05       0.51 f
+  U1167/Y (AOI22X1)                        0.05       0.57 r
+  U977/Y (BUFX2)                           0.04       0.61 r
+  U1169/Y (OR2X1)                          0.06       0.66 r
+  U1170/Y (AOI21X1)                        0.03       0.69 f
+  U1012/Y (BUFX2)                          0.04       0.73 f
+  U1183/Y (AOI21X1)                        0.03       0.76 r
+  U854/Y (BUFX2)                           0.03       0.79 r
+  U852/Y (INVX1)                           0.01       0.81 f
+  U853/Y (INVX1)                           0.00       0.81 r
+  U1184/Y (MUX2X1)                         0.02       0.83 f
+  U1185/Y (AOI21X1)                        0.02       0.85 r
+  U1100/Y (BUFX2)                          0.05       0.90 r
+  U1207/YS (FAX1)                          0.15       1.04 r
+  U1208/Y (INVX1)                          0.06       1.11 f
+  U1065/Y (AND2X1)                         0.06       1.17 f
+  U1276/Y (OAI21X1)                        0.08       1.24 r
+  U1284/Y (AND2X1)                         0.05       1.30 r
+  U932/Y (AND2X1)                          0.06       1.36 r
+  U933/Y (INVX1)                           0.03       1.39 f
+  U978/Y (AND2X1)                          0.04       1.43 f
+  U979/Y (INVX1)                           0.01       1.44 r
+  U1021/Y (AND2X1)                         0.04       1.48 r
+  U1022/Y (INVX1)                          0.03       1.51 f
+  U1293/Y (NAND3X1)                        0.03       1.55 r
+  U1009/Y (BUFX2)                          0.04       1.58 r
+  U987/Y (OR2X1)                           0.05       1.63 r
+  U988/Y (INVX1)                           0.02       1.66 f
+  U683/Y (AND2X1)                          0.03       1.69 f
+  U684/Y (INVX1)                           0.00       1.69 r
+  U1298/Y (AOI21X1)                        0.01       1.70 f
+  U1110/Y (BUFX2)                          0.04       1.74 f
+  U1386/Y (AOI22X1)                        0.03       1.77 r
+  U1046/Y (BUFX2)                          0.04       1.81 r
+  U1387/Y (OAI21X1)                        0.02       1.83 f
+  U1388/Y (AOI21X1)                        0.02       1.84 r
+  U639/Y (BUFX2)                           0.03       1.88 r
+  U1389/Y (OAI21X1)                        0.01       1.89 f
+  Dout_reg[9]/D (DFFPOSX1)                 0.00       1.89 f
+  data arrival time                                   1.89
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[9]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.89
+  -----------------------------------------------------------
+  slack (MET)                                         4.47
+
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[8]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[1]/CLK (DFFPOSX1)              0.00       0.00 r
+  state_reg[1]/Q (DFFPOSX1)                0.11       0.11 f
+  U1143/Y (INVX1)                          0.03       0.14 r
+  U1049/Y (OR2X1)                          0.05       0.19 r
+  U1050/Y (INVX1)                          0.03       0.21 f
+  U1088/Y (AND2X1)                         0.04       0.26 f
+  U1117/Y (AND2X1)                         0.05       0.31 f
+  U1118/Y (INVX1)                          0.07       0.38 r
+  U1119/Y (OR2X1)                          0.09       0.46 r
+  U1162/Y (INVX1)                          0.05       0.51 f
+  U1167/Y (AOI22X1)                        0.05       0.57 r
+  U977/Y (BUFX2)                           0.04       0.61 r
+  U1169/Y (OR2X1)                          0.06       0.66 r
+  U1170/Y (AOI21X1)                        0.03       0.69 f
+  U1012/Y (BUFX2)                          0.04       0.73 f
+  U1183/Y (AOI21X1)                        0.03       0.76 r
+  U854/Y (BUFX2)                           0.03       0.79 r
+  U852/Y (INVX1)                           0.01       0.81 f
+  U853/Y (INVX1)                           0.00       0.81 r
+  U1184/Y (MUX2X1)                         0.02       0.83 f
+  U1185/Y (AOI21X1)                        0.02       0.85 r
+  U1100/Y (BUFX2)                          0.05       0.90 r
+  U1207/YS (FAX1)                          0.15       1.04 r
+  U1208/Y (INVX1)                          0.06       1.11 f
+  U1065/Y (AND2X1)                         0.06       1.17 f
+  U1276/Y (OAI21X1)                        0.08       1.24 r
+  U939/Y (OR2X1)                           0.04       1.28 r
+  U940/Y (INVX1)                           0.02       1.30 f
+  U1061/Y (AND2X1)                         0.04       1.34 f
+  U1062/Y (INVX1)                          0.02       1.37 r
+  U978/Y (AND2X1)                          0.03       1.40 r
+  U979/Y (INVX1)                           0.03       1.42 f
+  U1021/Y (AND2X1)                         0.04       1.47 f
+  U1022/Y (INVX1)                          0.01       1.48 r
+  U1293/Y (NAND3X1)                        0.01       1.49 f
+  U1009/Y (BUFX2)                          0.04       1.53 f
+  U987/Y (OR2X1)                           0.05       1.57 f
+  U988/Y (INVX1)                           0.01       1.58 r
+  U683/Y (AND2X1)                          0.03       1.61 r
+  U684/Y (INVX1)                           0.02       1.63 f
+  U1298/Y (AOI21X1)                        0.02       1.65 r
+  U1110/Y (BUFX2)                          0.05       1.70 r
+  U1335/Y (INVX1)                          0.02       1.72 f
+  U1336/Y (AOI22X1)                        0.04       1.76 r
+  U878/Y (BUFX2)                           0.03       1.79 r
+  U876/Y (INVX1)                           0.01       1.81 f
+  U877/Y (INVX1)                           0.00       1.81 r
+  U1338/Y (OAI21X1)                        0.01       1.82 f
+  U644/Y (OR2X1)                           0.05       1.87 f
+  U645/Y (INVX1)                           0.00       1.87 r
+  U1339/Y (OAI21X1)                        0.01       1.88 f
+  Dout_reg[8]/D (DFFPOSX1)                 0.00       1.88 f
+  data arrival time                                   1.88
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[8]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.88
+  -----------------------------------------------------------
+  slack (MET)                                         4.48
+
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop clocked by Clk)
+  Endpoint: Dout_reg[2]
+            (rising edge-triggered flip-flop clocked by Clk)
+  Path Group: Clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[1]/CLK (DFFPOSX1)              0.00       0.00 r
+  state_reg[1]/Q (DFFPOSX1)                0.11       0.11 f
+  U1143/Y (INVX1)                          0.03       0.14 r
+  U1049/Y (OR2X1)                          0.05       0.19 r
+  U1050/Y (INVX1)                          0.03       0.21 f
+  U1088/Y (AND2X1)                         0.04       0.26 f
+  U1117/Y (AND2X1)                         0.05       0.31 f
+  U1118/Y (INVX1)                          0.07       0.38 r
+  U1119/Y (OR2X1)                          0.09       0.46 r
+  U1162/Y (INVX1)                          0.05       0.51 f
+  U1167/Y (AOI22X1)                        0.05       0.57 r
+  U977/Y (BUFX2)                           0.04       0.61 r
+  U1169/Y (OR2X1)                          0.06       0.66 r
+  U1170/Y (AOI21X1)                        0.03       0.69 f
+  U1012/Y (BUFX2)                          0.04       0.73 f
+  U1183/Y (AOI21X1)                        0.03       0.76 r
+  U854/Y (BUFX2)                           0.03       0.79 r
+  U852/Y (INVX1)                           0.01       0.81 f
+  U853/Y (INVX1)                           0.00       0.81 r
+  U1184/Y (MUX2X1)                         0.02       0.83 f
+  U1185/Y (AOI21X1)                        0.02       0.85 r
+  U1100/Y (BUFX2)                          0.05       0.90 r
+  U1207/YS (FAX1)                          0.15       1.04 r
+  U1208/Y (INVX1)                          0.06       1.11 f
+  U1065/Y (AND2X1)                         0.06       1.17 f
+  U1276/Y (OAI21X1)                        0.08       1.24 r
+  U1288/Y (INVX1)                          0.04       1.29 f
+  U1289/Y (AND2X1)                         0.04       1.33 f
+  U937/Y (AND2X1)                          0.06       1.39 f
+  U938/Y (INVX1)                           0.01       1.40 r
+  U742/Y (AND2X1)                          0.04       1.44 r
+  U743/Y (INVX1)                           0.02       1.46 f
+  U740/Y (INVX1)                           0.00       1.45 r
+  U741/Y (INVX1)                           0.01       1.47 f
+  U1370/Y (AOI21X1)                        0.03       1.50 r
+  U1044/Y (BUFX2)                          0.04       1.54 r
+  U1378/Y (NAND3X1)                        0.02       1.56 f
+  U896/Y (BUFX2)                           0.03       1.59 f
+  U1379/Y (AOI22X1)                        0.02       1.61 r
+  U906/Y (BUFX2)                           0.04       1.65 r
+  U1380/Y (NAND3X1)                        0.01       1.66 f
+  U676/Y (BUFX2)                           0.03       1.69 f
+  U698/Y (OR2X2)                           0.04       1.74 f
+  Dout_reg[2]/D (DFFPOSX1)                 0.00       1.74 f
+  data arrival time                                   1.74
+
+  clock Clk (rise edge)                    6.67       6.67
+  clock network delay (ideal)              0.00       6.67
+  clock uncertainty                       -0.25       6.42
+  Dout_reg[2]/CLK (DFFPOSX1)               0.00       6.42 r
+  library setup time                      -0.06       6.36
+  data required time                                  6.36
+  -----------------------------------------------------------
+  data required time                                  6.36
+  data arrival time                                  -1.74
+  -----------------------------------------------------------
+  slack (MET)                                         4.62
+
+
+1
+write -hierarchy -format verilog -output E1000X_gates.v
+Writing verilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X_gates.v'.
+1
+quit
+
+Memory usage for this session 135 Mbytes.
+Memory usage for this session including child processes 138 Mbytes.
+CPU usage for this session 5 seconds ( 0.00 hours ).
+Elapsed time for this session 7 seconds ( 0.00 hours ).
+
+Thank you...
+num returned lines 868
+/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/bin/vcs: line 3860: lsb_release: command not found
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Red Hat Enterprise Linux release 9.7 (Plow)' is not supported
+  on 'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+                         Chronologic VCS (TM)
+         Version U-2023.03-SP2-8 -- Wed May  6 15:18:07 2026
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v'
+Parsing design file 'tbs26gates.svp'
+Parsing included file 'E1000X_gates.v'.
+Back to file 'tbs26gates.svp'.
+Top Level Modules:
+       BUFX4
+       CLKBUF1
+       CLKBUF2
+       CLKBUF3
+       DFFNEGX1
+       DFFSR
+       HAX1
+       INVX2
+       INVX4
+       INVX8
+       LATCH
+       OAI22X1
+       TBUFX1
+       TBUFX2
+       XNOR2X1
+       XOR2X1
+       tb
+TimeScale is 1 ns / 10 ps
+
+Warning-[TFIPC] Too few instance port connections
+E1000X_gates.v, 854
+E1000X, "FAX1 U1207( .A (n996),  .B (rd),  .C (n1087),  .YS (n1328));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TCL-NTCL] Negative Timing Check Limit
+/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v, 263
+  Timing check limit (-2.1999999999999998e-09) will be treated as zero.
+  Timing check: $hold(negedge CLK, posedge D, -2.1999999999999998e-09, 
+  NOTIFIER);
+  Please provide non-negative constant limit for this timing check.
+
+
+Warning-[TCL-NTCL] Negative Timing Check Limit
+/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v, 579
+  Timing check limit (-2.1999999999999998e-09) will be treated as zero.
+  Timing check: $hold(negedge CLK, posedge D, -2.1999999999999998e-09, 
+  NOTIFIER);
+  Please provide non-negative constant limit for this timing check.
+
+Starting vcs inline pass...
+
+34 modules and 3 UDPs read.
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module AOI21X1
+recompiling module AOI22X1
+recompiling module BUFX2
+recompiling module BUFX4
+recompiling module CLKBUF1
+recompiling module CLKBUF2
+recompiling module CLKBUF3
+recompiling module DFFNEGX1
+recompiling module DFFPOSX1
+recompiling module DFFSR
+recompiling module FAX1
+recompiling module HAX1
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX4
+recompiling module INVX8
+recompiling module LATCH
+recompiling module MUX2X1
+recompiling module NAND2X1
+recompiling module NAND3X1
+recompiling module NOR2X1
+recompiling module NOR3X1
+recompiling module OAI21X1
+recompiling module OAI22X1
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module TBUFX1
+recompiling module TBUFX2
+recompiling module XNOR2X1
+recompiling module XOR2X1
+recompiling module tb
+recompiling module E1000X
+All of 34 modules done
+/bin/ld: rmapats_mop.o: warning: relocation against `lvlQueue' in read-only section `.text'
+/bin/ld: warning: creating DT_TEXTREL in a shared object
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _226868_archive_1.so objs/udps/exIG1.o objs/udps/gSqMj.o objs/udps/U7Vwg.o  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .654 seconds to compile + .641 seconds to elab + .307 seconds to link
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:18 2026
+Gate VCD debug enabled: file=s26p287_gate_500_560.vcd start=500ns stop=560ns
+tpkt has  35 expected results
+tpkt has  56 expected results
+GATE_DBG t=50000 Clk=0 Reset=0 TX_EN=1 Din=ff Dout=289 DoutBin=1010001001 Dout5=0 Dout6=0 state=001 rd=1
+GATE_DBG t=50500 Clk=1 Reset=0 TX_EN=1 Din=2c Dout=05b DoutBin=0001011011 Dout5=0 Dout6=1 state=010 rd=0
+GATE_DBG t=51000 Clk=0 Reset=0 TX_EN=1 Din=2c Dout=05b DoutBin=0001011011 Dout5=0 Dout6=1 state=010 rd=0
+GATE_DBG t=51500 Clk=1 Reset=0 TX_EN=1 Din=6c Dout=235 DoutBin=1000110101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=52000 Clk=0 Reset=0 TX_EN=1 Din=6c Dout=235 DoutBin=1000110101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=52500 Clk=1 Reset=0 TX_EN=1 Din=14 Dout=26c DoutBin=1001101100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=53000 Clk=0 Reset=0 TX_EN=1 Din=14 Dout=26c DoutBin=1001101100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=53500 Clk=1 Reset=0 TX_EN=1 Din=b0 Dout=0ec DoutBin=0011101100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=54000 Clk=0 Reset=0 TX_EN=1 Din=b0 Dout=0ec DoutBin=0011101100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=54500 Clk=1 Reset=0 TX_EN=1 Din=69 Dout=374 DoutBin=1101110100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=55000 Clk=0 Reset=0 TX_EN=1 Din=69 Dout=374 DoutBin=1101110100 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=55500 Clk=1 Reset=0 TX_EN=1 Din=3c Dout=149 DoutBin=0101001001 Dout5=0 Dout6=1 state=011 rd=1
+GATE_DBG t=56000 Clk=0 Reset=0 TX_EN=1 Din=3c Dout=149 DoutBin=0101001001 Dout5=0 Dout6=1 state=011 rd=1
+GATE_DBG t=56500 Clk=1 Reset=0 TX_EN=1 Din=b7 Dout=0e9 DoutBin=0011101001 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=57000 Clk=0 Reset=0 TX_EN=1 Din=b7 Dout=0e9 DoutBin=0011101001 Dout5=1 Dout6=1 state=011 rd=0
+GATE_DBG t=57500 Clk=1 Reset=0 TX_EN=1 Din=c8 Dout=25c DoutBin=1001011100 Dout5=0 Dout6=1 state=011 rd=0
+GATE_DBG t=58000 Clk=0 Reset=0 TX_EN=1 Din=c8 Dout=25c DoutBin=1001011100 Dout5=0 Dout6=1 state=011 rd=0
+GATE_DBG t=58500 Clk=1 Reset=0 TX_EN=1 Din=62 Dout=157 DoutBin=0101010111 Dout5=0 Dout6=1 state=011 rd=0
+GATE_DBG t=59000 Clk=0 Reset=0 TX_EN=1 Din=62 Dout=157 DoutBin=0101010111 Dout5=0 Dout6=1 state=011 rd=0
+GATE_DBG t=59500 Clk=1 Reset=0 TX_EN=1 Din=b8 Dout=198 DoutBin=0110011000 Dout5=0 Dout6=0 state=011 rd=1
+GATE_DBG t=60000 Clk=0 Reset=0 TX_EN=1 Din=b8 Dout=198 DoutBin=0110011000 Dout5=0 Dout6=0 state=011 rd=1
+GATE_DBG t=60500 Clk=1 Reset=0 TX_EN=1 Din=5c Dout=32d DoutBin=1100101101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=61000 Clk=0 Reset=0 TX_EN=1 Din=5c Dout=32d DoutBin=1100101101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=61500 Clk=1 Reset=0 TX_EN=1 Din=45 Dout=14c DoutBin=0101001100 Dout5=0 Dout6=1 state=011 rd=1
+GATE_DBG t=62000 Clk=0 Reset=0 TX_EN=1 Din=45 Dout=14c DoutBin=0101001100 Dout5=0 Dout6=1 state=011 rd=1
+GATE_DBG t=62500 Clk=1 Reset=0 TX_EN=1 Din=e8 Dout=29c DoutBin=1010011100 Dout5=0 Dout6=0 state=011 rd=0
+GATE_DBG t=63000 Clk=0 Reset=0 TX_EN=1 Din=e8 Dout=29c DoutBin=1010011100 Dout5=0 Dout6=0 state=011 rd=0
+GATE_DBG t=63500 Clk=1 Reset=0 TX_EN=1 Din=29 Dout=2a5 DoutBin=1010100101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=64000 Clk=0 Reset=0 TX_EN=1 Din=29 Dout=2a5 DoutBin=1010100101 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=64500 Clk=1 Reset=0 TX_EN=1 Din=5e Dout=227 DoutBin=1000100111 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=65000 Clk=0 Reset=0 TX_EN=1 Din=5e Dout=227 DoutBin=1000100111 Dout5=1 Dout6=0 state=011 rd=0
+GATE_DBG t=65500 Clk=1 Reset=0 TX_EN=1 Din=1a Dout=269 DoutBin=1001101001 Dout5=1 Dout6=1 state=011 rd=0
+
+"/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v", 301: Timing violation in tb.PROTECTED
+    $setup( posedge D:93997, posedge CLK:94000, limit: 9 );
+
+Fatal: "tbs26gates.svp", 105: tb.ckDr: at time 950000 ps
+Dout contains one or more X values @950.0 ns
+$finish called from file "tbs26gates.svp", line 105.
+$finish at simulation time                95000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 950000 ps
+CPU Time:      0.530 seconds;       Data structure size:   0.1Mb
+Wed May  6 15:18:11 2026
+VCS simulation didn't complete successfully

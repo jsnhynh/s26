@@ -1,0 +1,18 @@
+#!/usr/bin/csh
+
+source /apps/design_environment.csh
+
+set vcs_args = ()
+set sim_args = ()
+foreach arg ($argv)
+    if ("$arg" =~ +*) then
+        set sim_args = ($sim_args "$arg")
+    else
+        set vcs_args = ($vcs_args "$arg")
+    endif
+end
+
+vcs -sverilog $vcs_args
+if ($status != 0) exit $status
+./simv $sim_args
+
