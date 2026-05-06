@@ -305,11 +305,11 @@ module E1000X (
 
     always_ff @(posedge Clk) begin
         if (Reset) begin
-            Dout        <= tx_order(10'b0011111010);
-            rd          <= 1'b0;
-            emit_state  <= SEND_IK;
-            emit_data   <= K28_5;
-            emit_is_k   <= 1'b1;
+            Dout        <= tx_order(10'b1001000101);
+            rd          <= 1'b1;
+            emit_state  <= SEND_ID;
+            emit_data   <= D16_2;
+            emit_is_k   <= 1'b0;
             wr_ptr      <= 3'd0;
             rd_ptr      <= 3'd0;
             fifo_count  <= 4'd0;
