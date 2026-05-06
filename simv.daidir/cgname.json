@@ -119,45 +119,45 @@
         "module",
         20
     ],
+    "NAND2X1": [
+        "NAND2X1",
+        "zeaQT",
+        "module",
+        21
+    ],
     "NAND3X1": [
         "NAND3X1",
         "n5kPb",
         "module",
-        21
+        22
     ],
     "NOR2X1": [
         "NOR2X1",
         "esUc7",
         "module",
-        22
+        23
     ],
     "NOR3X1": [
         "NOR3X1",
         "DY4ye",
         "module",
-        23
+        24
     ],
     "OAI21X1": [
         "OAI21X1",
         "EivVh",
         "module",
-        24
+        25
     ],
     "OAI22X1": [
         "OAI22X1",
         "B3x5e",
         "module",
-        25
+        26
     ],
     "OR2X1": [
         "OR2X1",
         "YRkbh",
-        "module",
-        26
-    ],
-    "OR2X2": [
-        "OR2X2",
-        "AMGuT",
         "module",
         27
     ],
@@ -173,40 +173,52 @@
         "module",
         29
     ],
+    "XNOR2X1": [
+        "XNOR2X1",
+        "nGFzt",
+        "module",
+        30
+    ],
     "XOR2X1": [
         "XOR2X1",
         "Whn5t",
         "module",
-        30
+        31
     ],
     "tb": [
         "tb",
         "g7hgQ",
         "module",
-        31
+        32
+    ],
+    "E1000X": [
+        "E1000X",
+        "jj2Zg",
+        "module",
+        33
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
-        32
+        34
     ],
     "udp_dff": [
         "udp_dff",
         "exIG1",
         "udp",
-        33
+        35
     ],
     "udp_tlat": [
         "udp_tlat",
         "gSqMj",
         "udp",
-        34
+        36
     ],
     "udp_mux2": [
         "udp_mux2",
         "U7Vwg",
         "udp",
-        35
+        37
     ]
 }

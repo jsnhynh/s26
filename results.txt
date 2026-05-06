@@ -1,5 +1,5 @@
 Run for 287 S26 project 
-Run at Wed May  6 15:51:58 2026
+Run at Wed May  6 15:55:37 2026
 VCS simulation ran
 Synthesis worked ish
-VCS didn't complete successfully
+VCS simulation failed
