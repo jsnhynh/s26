@@ -77,148 +77,160 @@
         "module",
         13
     ],
+    "FAX1": [
+        "FAX1",
+        "fsx9c",
+        "module",
+        14
+    ],
     "HAX1": [
         "HAX1",
         "rj18v",
         "module",
-        14
+        15
     ],
     "INVX1": [
         "INVX1",
         "wDCMR",
         "module",
-        15
+        16
     ],
     "INVX2": [
         "INVX2",
         "uw12y",
         "module",
-        16
+        17
     ],
     "INVX4": [
         "INVX4",
         "ffcHk",
         "module",
-        17
+        18
     ],
     "INVX8": [
         "INVX8",
         "CHUp9",
         "module",
-        18
+        19
     ],
     "LATCH": [
         "LATCH",
         "z6vG1",
         "module",
-        19
+        20
     ],
     "MUX2X1": [
         "MUX2X1",
         "kJR9E",
         "module",
-        20
+        21
     ],
     "NAND2X1": [
         "NAND2X1",
         "zeaQT",
         "module",
-        21
+        22
     ],
     "NAND3X1": [
         "NAND3X1",
         "n5kPb",
         "module",
-        22
+        23
     ],
     "NOR2X1": [
         "NOR2X1",
         "esUc7",
         "module",
-        23
+        24
     ],
     "NOR3X1": [
         "NOR3X1",
         "DY4ye",
         "module",
-        24
+        25
     ],
     "OAI21X1": [
         "OAI21X1",
         "EivVh",
         "module",
-        25
+        26
     ],
     "OAI22X1": [
         "OAI22X1",
         "B3x5e",
         "module",
-        26
+        27
     ],
     "OR2X1": [
         "OR2X1",
         "YRkbh",
         "module",
-        27
+        28
+    ],
+    "OR2X2": [
+        "OR2X2",
+        "AMGuT",
+        "module",
+        29
     ],
     "TBUFX1": [
         "TBUFX1",
         "eWUeT",
         "module",
-        28
+        30
     ],
     "TBUFX2": [
         "TBUFX2",
         "n9zvr",
         "module",
-        29
+        31
     ],
     "XNOR2X1": [
         "XNOR2X1",
         "nGFzt",
         "module",
-        30
+        32
     ],
     "XOR2X1": [
         "XOR2X1",
         "Whn5t",
         "module",
-        31
+        33
     ],
     "tb": [
         "tb",
         "g7hgQ",
         "module",
-        32
+        34
     ],
     "E1000X": [
         "E1000X",
         "jj2Zg",
         "module",
-        33
+        35
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
-        34
+        36
     ],
     "udp_dff": [
         "udp_dff",
         "exIG1",
         "udp",
-        35
+        37
     ],
     "udp_tlat": [
         "udp_tlat",
         "gSqMj",
         "udp",
-        36
+        38
     ],
     "udp_mux2": [
         "udp_mux2",
         "U7Vwg",
         "udp",
-        37
+        39
     ]
 }
