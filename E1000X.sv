@@ -367,43 +367,37 @@ module E1000X(
     always_comb begin
         enc_byte_la = K_I_COMMA;
         enc_is_k_la = 1'b1;
-        if ((state == ST_DATA) && !last_data_symbol) begin
-            enc_byte_la = fifo_next_dout;
-            enc_is_k_la = 1'b0;
-        end
-        else begin
-            case (next_state)
-                ST_IDLE_K: begin
-                    enc_byte_la = K_I_COMMA;
-                    enc_is_k_la = 1'b1;
-                end
-                ST_IDLE_D: begin
-                    enc_byte_la = ((state == ST_IDLE_K) ? enc_rd_out : idle_after_k_rd_pos)
-                                  ? D_I2 : D_I1;
-                    enc_is_k_la = 1'b0;
-                end
-                ST_START: begin
-                    enc_byte_la = K_S;
-                    enc_is_k_la = 1'b1;
-                end
-                ST_DATA: begin
-                    enc_byte_la = fifo_next_dout;
-                    enc_is_k_la = 1'b0;
-                end
-                ST_EPD_T: begin
-                    enc_byte_la = K_T;
-                    enc_is_k_la = 1'b1;
-                end
-                ST_EPD_R: begin
-                    enc_byte_la = K_R;
-                    enc_is_k_la = 1'b1;
-                end
-                default: begin
-                    enc_byte_la = K_I_COMMA;
-                    enc_is_k_la = 1'b1;
-                end
-            endcase
-        end
+        case (next_state)
+            ST_IDLE_K: begin
+                enc_byte_la = K_I_COMMA;
+                enc_is_k_la = 1'b1;
+            end
+            ST_IDLE_D: begin
+                enc_byte_la = ((state == ST_IDLE_K) ? enc_rd_out : idle_after_k_rd_pos)
+                              ? D_I2 : D_I1;
+                enc_is_k_la = 1'b0;
+            end
+            ST_START: begin
+                enc_byte_la = K_S;
+                enc_is_k_la = 1'b1;
+            end
+            ST_DATA: begin
+                enc_byte_la = fifo_next_dout;
+                enc_is_k_la = 1'b0;
+            end
+            ST_EPD_T: begin
+                enc_byte_la = K_T;
+                enc_is_k_la = 1'b1;
+            end
+            ST_EPD_R: begin
+                enc_byte_la = K_R;
+                enc_is_k_la = 1'b1;
+            end
+            default: begin
+                enc_byte_la = K_I_COMMA;
+                enc_is_k_la = 1'b1;
+            end
+        endcase
     end
 
     // Posedge Dout: at posedge N registers encode(next_state, enc_rd_out=rd[N]).

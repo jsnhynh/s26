@@ -50,12 +50,12 @@ initial begin
 end
 
 initial begin
-    $dumpfile("gate_200_250.vcd");
+    $dumpfile("gate_7450_7490.vcd");
     $dumplimit(200_000_000);
     $dumpvars(9,E1);
     $dumpoff();
-    #200 $dumpon();
-    #50 $dumpoff();
+    #7450 $dumpon();
+    #40 $dumpoff();
 end
 
 `protected
