@@ -339,84 +339,15 @@ module E1000X(
         end
     end
 
-    // ---------------------------------------------------------------
-    // Look-ahead encoders: compute encoding for NEXT state so we can
-    // register Dout at posedge using only DFFPOSX1 (library-compatible).
-    // enc_rd_out is rd[N] (value after this posedge), used for selection.
-    // ---------------------------------------------------------------
-    logic [7:0] enc_byte_la;
-    logic       enc_is_k_la;
-    logic [9:0] enc_code_la_rd0, enc_code_la_rd1;
-
-    enc8b10b_core u_enc_la0 (
-        .data   (enc_byte_la),
-        .is_k   (enc_is_k_la),
-        .rd_in  (1'b0),
-        .code   (enc_code_la_rd0),
-        .rd_out ()
-    );
-
-    enc8b10b_core u_enc_la1 (
-        .data   (enc_byte_la),
-        .is_k   (enc_is_k_la),
-        .rd_in  (1'b1),
-        .code   (enc_code_la_rd1),
-        .rd_out ()
-    );
-
-    always_comb begin
-        enc_byte_la = K_I_COMMA;
-        enc_is_k_la = 1'b1;
-        case (next_state)
-            ST_IDLE_K: begin
-                enc_byte_la = K_I_COMMA;
-                enc_is_k_la = 1'b1;
-            end
-            ST_IDLE_D: begin
-                enc_byte_la = ((state == ST_IDLE_K) ? enc_rd_out : idle_after_k_rd_pos)
-                              ? D_I2 : D_I1;
-                enc_is_k_la = 1'b0;
-            end
-            ST_START: begin
-                enc_byte_la = K_S;
-                enc_is_k_la = 1'b1;
-            end
-            ST_DATA: begin
-                enc_byte_la = fifo_next_dout;
-                enc_is_k_la = 1'b0;
-            end
-            ST_EPD_T: begin
-                enc_byte_la = K_T;
-                enc_is_k_la = 1'b1;
-            end
-            ST_EPD_R: begin
-                enc_byte_la = K_R;
-                enc_is_k_la = 1'b1;
-            end
-            default: begin
-                enc_byte_la = K_I_COMMA;
-                enc_is_k_la = 1'b1;
-            end
-        endcase
-    end
-
-    // Posedge Dout: at posedge N registers encode(next_state, enc_rd_out=rd[N]).
-    // Testbench samples between posedge N and N+1 -> reads encode(state[N], rd[N]).
-    always_ff @(posedge Clk) begin
+    // Capture the current encoded symbol on the falling edge. The posedge
+    // state/RD/FIFO updates get a half-cycle to settle before Dout captures,
+    // and the checker sees a stable registered value at the next posedge.
+    always_ff @(negedge Clk) begin
         if (Reset)
             Dout <= RESET_DOUT;
-        else begin
-            if (enc_rd_out)
-                Dout <= {enc_code_la_rd1[0], enc_code_la_rd1[1], enc_code_la_rd1[2],
-                         enc_code_la_rd1[3], enc_code_la_rd1[4], enc_code_la_rd1[5],
-                         enc_code_la_rd1[6], enc_code_la_rd1[7], enc_code_la_rd1[8],
-                         enc_code_la_rd1[9]};
-            else
-                Dout <= {enc_code_la_rd0[0], enc_code_la_rd0[1], enc_code_la_rd0[2],
-                         enc_code_la_rd0[3], enc_code_la_rd0[4], enc_code_la_rd0[5],
-                         enc_code_la_rd0[6], enc_code_la_rd0[7], enc_code_la_rd0[8],
-                         enc_code_la_rd0[9]};
-        end
+        else
+            Dout <= {enc_code[0], enc_code[1], enc_code[2], enc_code[3], enc_code[4],
+                     enc_code[5], enc_code[6], enc_code[7], enc_code[8], enc_code[9]};
     end
 
     always_comb begin
