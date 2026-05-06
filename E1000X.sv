@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-// 802.3 36.2.4.5: make one code group, track rd like stream has memory.
+// 802.3 36.2.4.5: make one code group, track rd like stream has memory
 module pcs_8b10b_encode (
     input  logic [7:0] din,
     input  logic       kin,
@@ -13,7 +13,7 @@ module pcs_8b10b_encode (
     logic [3:0] four;
     logic       rd_mid;
 
-    // 802.3 table 36-1: 5b to 6b table, plus rd after six bits.
+    // 802.3 table 36-1: 5b to 6b table, plus rd after six bits
     function automatic logic [6:0] enc_5b6b(input logic [4:0] x, input logic rd);
         begin
             enc_5b6b = 7'b1_100111;
@@ -86,7 +86,7 @@ module pcs_8b10b_encode (
         end
     endfunction
 
-    // 802.3 table 36-1: 3b to 4b table, use rd from the six bit half.
+    // 802.3 table 36-1: 3b to 4b table, use rd from the six bit half
     function automatic logic [4:0] enc_3b4b(
         input logic [2:0] y,
         input logic [4:0] x,
@@ -109,15 +109,13 @@ module pcs_8b10b_encode (
                 4'b1_101: enc_3b4b = 5'b1_1010;
                 4'b0_110: enc_3b4b = 5'b0_0110;
                 4'b1_110: enc_3b4b = 5'b1_0110;
-                4'b0_111: enc_3b4b = ((x == 5'd17) || (x == 5'd18) || (x == 5'd20))
-                                      ? 5'b1_0111 : 5'b1_1110;
-                4'b1_111: enc_3b4b = ((x == 5'd11) || (x == 5'd13) || (x == 5'd14))
-                                      ? 5'b0_1000 : 5'b0_0001;
+                4'b0_111: enc_3b4b = ((x == 5'd17) || (x == 5'd18) || (x == 5'd20)) ? 5'b1_0111 : 5'b1_1110;
+                4'b1_111: enc_3b4b = ((x == 5'd11) || (x == 5'd13) || (x == 5'd14)) ? 5'b0_1000 : 5'b0_0001;
             endcase
         end
     endfunction
 
-    // 802.3 table 36-2: k code table, only project k symbols go here.
+    // 802.3 table 36-2: k code table, only project k symbols go here
     always_comb begin
         six    = 6'b001111;
         four   = 4'b1010;
@@ -126,21 +124,17 @@ module pcs_8b10b_encode (
 
         if (kin) begin
             unique case ({rd_in, din})
-                9'b0_10111100: begin code = 10'b0011111010; rd_out = 1'b1; end
-                9'b1_10111100: begin code = 10'b1100000101; rd_out = 1'b0; end
-                9'b0_11111011: begin code = 10'b1101101000; rd_out = 1'b0; end
-                9'b1_11111011: begin code = 10'b0010010111; rd_out = 1'b1; end
-                9'b0_11111101: begin code = 10'b1011101000; rd_out = 1'b0; end
-                9'b1_11111101: begin code = 10'b0100010111; rd_out = 1'b1; end
-                9'b0_11110111: begin code = 10'b1110101000; rd_out = 1'b0; end
-                9'b1_11110111: begin code = 10'b0001010111; rd_out = 1'b1; end
-                default: begin
-                    code   = 10'b0011111010;
-                    rd_out = 1'b1;
-                end
+                9'b0_10111100:  begin code = 10'b0011111010; rd_out = 1'b1; end
+                9'b1_10111100:  begin code = 10'b1100000101; rd_out = 1'b0; end
+                9'b0_11111011:  begin code = 10'b1101101000; rd_out = 1'b0; end
+                9'b1_11111011:  begin code = 10'b0010010111; rd_out = 1'b1; end
+                9'b0_11111101:  begin code = 10'b1011101000; rd_out = 1'b0; end
+                9'b1_11111101:  begin code = 10'b0100010111; rd_out = 1'b1; end
+                9'b0_11110111:  begin code = 10'b1110101000; rd_out = 1'b0; end
+                9'b1_11110111:  begin code = 10'b0001010111; rd_out = 1'b1; end
+                default:        begin code = 10'b0011111010; rd_out = 1'b1; end
             endcase
-        end
-        else begin
+        end else begin
             {rd_mid, six} = enc_5b6b(din[4:0], rd_in);
             {rd_out, four} = enc_3b4b(din[7:5], din[4:0], rd_mid);
             code = {six, four};
@@ -149,7 +143,7 @@ module pcs_8b10b_encode (
 
 endmodule
 
-// class top, din plus tx_en in, encoded dout out.
+// class top, din plus tx_en in, encoded dout out
 module E1000X (
     input  logic       Clk,
     input  logic       Reset,
@@ -198,7 +192,7 @@ module E1000X (
     logic       frame_pending;
     logic       idle_data_select;
 
-    // 802.3 36.2.4.4: rd feeds next symbol, no reset per byte.
+    // 802.3 36.2.4.4: rd feeds next symbol, no reset per byte
     pcs_8b10b_encode u_encoder (
         .din    (emit_data),
         .kin    (emit_is_k),
@@ -207,13 +201,12 @@ module E1000X (
         .rd_out (enc_rd_out)
     );
 
-    // 802.3 36.2.4.19: bit zero goes first, testbench wants word flipped.
+    // 802.3 36.2.4.19: bit zero goes first
     function automatic logic [9:0] tx_order(input logic [9:0] raw);
-        tx_order = {raw[0], raw[1], raw[2], raw[3], raw[4],
-                    raw[5], raw[6], raw[7], raw[8], raw[9]};
+        tx_order = {raw[0], raw[1], raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8], raw[9]};
     endfunction
 
-    // 802.3 36.2.5.2.1: pick next ordered set from tx_en and fifo state.
+    // 802.3 36.2.5.2.1: pick next ordered set from tx_en and fifo state
     always_comb begin
         have_data_now = (fifo_count != 4'd0) || TX_EN;
         frame_pending = have_data_now;
@@ -226,79 +219,74 @@ module E1000X (
         consume_data    = 1'b0;
 
         unique case (emit_state)
-            // 802.3 36.2.4.12: idle starts with k28.5.
+            // 802.3 36.2.4.12: idle starts with k28.5
             SEND_IK: begin
                 next_emit_state = SEND_ID;
                 next_emit_data  = idle_data_select ? D16_2 : D05_6;
                 next_emit_is_k  = 1'b0;
             end
 
-            // 802.3 36.2.4.12: idle second code is d5.6 or d16.2.
+            // 802.3 36.2.4.12: idle second code is d5.6 or d16.2
             SEND_ID: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_S;
                     next_emit_data  = K27_7;
                     next_emit_is_k  = 1'b1;
-                end
-                else begin
+                end else begin
                     next_emit_state = SEND_IK;
                     next_emit_data  = K28_5;
                     next_emit_is_k  = 1'b1;
                 end
             end
 
-            // 802.3 36.2.4.14: start packet is s, aka k27.7.
+            // 802.3 36.2.4.14: start packet is s, aka k27.7
             SEND_S: begin
                 if (have_data_now) begin
                     next_emit_state = SEND_D;
                     next_emit_data  = scheduled_data;
                     next_emit_is_k  = 1'b0;
                     consume_data    = 1'b1;
-                end
-                else begin
+                end else begin
                     next_emit_state = SEND_S;
                     next_emit_data  = K27_7;
                     next_emit_is_k  = 1'b1;
                 end
             end
 
-            // 802.3 36.2.4.11: data code groups are plain gmii bytes.
+            // 802.3 36.2.4.11: data code groups are plain gmii bytes
             SEND_D: begin
                 if (have_data_now) begin
                     next_emit_state = SEND_D;
                     next_emit_data  = scheduled_data;
                     next_emit_is_k  = 1'b0;
                     consume_data    = 1'b1;
-                end
-                else begin
+                end else begin
                     next_emit_state = SEND_T;
                     next_emit_data  = K29_7;
                     next_emit_is_k  = 1'b1;
                 end
             end
 
-            // 802.3 36.2.4.15: end packet starts with t, aka k29.7.
+            // 802.3 36.2.4.15: end packet starts with t, aka k29.7
             SEND_T: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_R;
                     next_emit_data  = K23_7;
                     next_emit_is_k  = 1'b1;
-                end
-                else begin
+                end else begin
                     next_emit_state = SEND_IK;
                     next_emit_data  = K28_5;
                     next_emit_is_k  = 1'b1;
                 end
             end
 
-            // 802.3 36.2.4.16: r gives carrier extend and packet gap help.
+            // 802.3 36.2.4.16: r gives carrier extend and packet gap help
             SEND_R: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_S;
                     next_emit_data  = K27_7;
                     next_emit_is_k  = 1'b1;
-                end
-                else begin
+                end else begin
                     next_emit_state = SEND_IK;
                     next_emit_data  = K28_5;
                     next_emit_is_k  = 1'b1;
@@ -313,11 +301,10 @@ module E1000X (
         endcase
 
         pop_fifo  = consume_data && (fifo_count != 4'd0);
-        push_fifo = TX_EN && !(consume_data && (fifo_count == 4'd0)) &&
-                    ((fifo_count != 4'd8) || pop_fifo);
+        push_fifo = TX_EN && !(consume_data && (fifo_count == 4'd0)) && ((fifo_count != 4'd8) || pop_fifo);
     end
 
-    // 802.3 36.2.4.2: one code group per clock, registered for gate timing.
+    // 802.3 36.2.4.2: one code group per clock, reg'd for gate timing
     always_ff @(posedge Clk) begin
         if (Reset) begin
             Dout        <= tx_order(10'b0011111010);
@@ -328,11 +315,8 @@ module E1000X (
             wr_ptr      <= 3'd0;
             rd_ptr      <= 3'd0;
             fifo_count  <= 4'd0;
-            for (int i = 0; i < 8; i++) begin
-                fifo_mem[i] <= 8'h00;
-            end
-        end
-        else begin
+            for (int i = 0; i < 8; i++) fifo_mem[i] <= 8'h00;
+        end else begin
             Dout       <= tx_order(enc_code);
             rd         <= enc_rd_out;
             emit_state <= next_emit_state;
@@ -344,14 +328,13 @@ module E1000X (
                 wr_ptr <= wr_ptr + 3'd1;
             end
 
-            if (pop_fifo) begin
-                rd_ptr <= rd_ptr + 3'd1;
-            end
+            if (pop_fifo) rd_ptr <= rd_ptr + 3'd1;
+        
 
             unique case ({push_fifo, pop_fifo})
-                2'b10: fifo_count <= fifo_count + 4'd1;
-                2'b01: fifo_count <= fifo_count - 4'd1;
-                default: fifo_count <= fifo_count;
+                2'b10:      fifo_count <= fifo_count + 4'd1;
+                2'b01:      fifo_count <= fifo_count - 4'd1;
+                default:    fifo_count <= fifo_count;
             endcase
         end
     end
