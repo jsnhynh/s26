@@ -1,5 +1,6 @@
 `timescale 1ns/1ps
 
+// 802.3 36.2.4.5: make one code group, track rd like stream has memory.
 module pcs_8b10b_encode (
     input  logic [7:0] din,
     input  logic       kin,
@@ -12,8 +13,10 @@ module pcs_8b10b_encode (
     logic [3:0] four;
     logic       rd_mid;
 
+    // 802.3 table 36-1: 5b to 6b table, plus rd after six bits.
     function automatic logic [6:0] enc_5b6b(input logic [4:0] x, input logic rd);
         begin
+            enc_5b6b = 7'b1_100111;
             unique case ({rd, x})
                 6'b0_00000: enc_5b6b = 7'b1_100111;
                 6'b0_00001: enc_5b6b = 7'b1_011101;
@@ -79,17 +82,18 @@ module pcs_8b10b_encode (
                 6'b1_11101: enc_5b6b = 7'b0_010001;
                 6'b1_11110: enc_5b6b = 7'b0_100001;
                 6'b1_11111: enc_5b6b = 7'b0_010100;
-                default:    enc_5b6b = 7'b1_100111;
             endcase
         end
     endfunction
 
+    // 802.3 table 36-1: 3b to 4b table, use rd from the six bit half.
     function automatic logic [4:0] enc_3b4b(
         input logic [2:0] y,
         input logic [4:0] x,
         input logic       rd
     );
         begin
+            enc_3b4b = 5'b1_1011;
             unique case ({rd, y})
                 4'b0_000: enc_3b4b = 5'b1_1011;
                 4'b1_000: enc_3b4b = 5'b0_0100;
@@ -109,11 +113,11 @@ module pcs_8b10b_encode (
                                       ? 5'b1_0111 : 5'b1_1110;
                 4'b1_111: enc_3b4b = ((x == 5'd11) || (x == 5'd13) || (x == 5'd14))
                                       ? 5'b0_1000 : 5'b0_0001;
-                default:  enc_3b4b = 5'b1_1011;
             endcase
         end
     endfunction
 
+    // 802.3 table 36-2: k code table, only project k symbols go here.
     always_comb begin
         six    = 6'b001111;
         four   = 4'b1010;
@@ -145,6 +149,7 @@ module pcs_8b10b_encode (
 
 endmodule
 
+// class top, din plus tx_en in, encoded dout out.
 module E1000X (
     input  logic       Clk,
     input  logic       Reset,
@@ -193,6 +198,7 @@ module E1000X (
     logic       frame_pending;
     logic       idle_data_select;
 
+    // 802.3 36.2.4.4: rd feeds next symbol, no reset per byte.
     pcs_8b10b_encode u_encoder (
         .din    (emit_data),
         .kin    (emit_is_k),
@@ -201,11 +207,13 @@ module E1000X (
         .rd_out (enc_rd_out)
     );
 
+    // 802.3 36.2.4.19: bit zero goes first, testbench wants word flipped.
     function automatic logic [9:0] tx_order(input logic [9:0] raw);
         tx_order = {raw[0], raw[1], raw[2], raw[3], raw[4],
                     raw[5], raw[6], raw[7], raw[8], raw[9]};
     endfunction
 
+    // 802.3 36.2.5.2.1: pick next ordered set from tx_en and fifo state.
     always_comb begin
         have_data_now = (fifo_count != 4'd0) || TX_EN;
         frame_pending = have_data_now;
@@ -218,12 +226,14 @@ module E1000X (
         consume_data    = 1'b0;
 
         unique case (emit_state)
+            // 802.3 36.2.4.12: idle starts with k28.5.
             SEND_IK: begin
                 next_emit_state = SEND_ID;
                 next_emit_data  = idle_data_select ? D16_2 : D05_6;
                 next_emit_is_k  = 1'b0;
             end
 
+            // 802.3 36.2.4.12: idle second code is d5.6 or d16.2.
             SEND_ID: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_S;
@@ -237,6 +247,7 @@ module E1000X (
                 end
             end
 
+            // 802.3 36.2.4.14: start packet is s, aka k27.7.
             SEND_S: begin
                 if (have_data_now) begin
                     next_emit_state = SEND_D;
@@ -251,6 +262,7 @@ module E1000X (
                 end
             end
 
+            // 802.3 36.2.4.11: data code groups are plain gmii bytes.
             SEND_D: begin
                 if (have_data_now) begin
                     next_emit_state = SEND_D;
@@ -265,6 +277,7 @@ module E1000X (
                 end
             end
 
+            // 802.3 36.2.4.15: end packet starts with t, aka k29.7.
             SEND_T: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_R;
@@ -278,6 +291,7 @@ module E1000X (
                 end
             end
 
+            // 802.3 36.2.4.16: r gives carrier extend and packet gap help.
             SEND_R: begin
                 if (frame_pending) begin
                     next_emit_state = SEND_S;
@@ -303,6 +317,7 @@ module E1000X (
                     ((fifo_count != 4'd8) || pop_fifo);
     end
 
+    // 802.3 36.2.4.2: one code group per clock, registered for gate timing.
     always_ff @(posedge Clk) begin
         if (Reset) begin
             Dout        <= tx_order(10'b0011111010);
