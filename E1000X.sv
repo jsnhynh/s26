@@ -9,135 +9,135 @@ module pcs_8b10b_encode (
     output logic       rd_out
 );
 
-    logic [5:0] six;
-    logic [3:0] four;
-    logic       rd_mid;
+    logic [5:0] code6;
+    logic [3:0] code4;
+    logic       rd6;
 
     // 802.3 table 36-1: 5b to 6b table, plus rd after six bits
-    function automatic logic [6:0] enc_5b6b(input logic [4:0] x, input logic rd);
+    function automatic logic [6:0] enc_5b6b(input logic [4:0] lo5, input logic rd_in);
         begin
-            enc_5b6b = 7'b1_100111;
-            unique case ({rd, x})
-                6'b0_00000: enc_5b6b = 7'b1_100111;
-                6'b0_00001: enc_5b6b = 7'b1_011101;
-                6'b0_00010: enc_5b6b = 7'b1_101101;
-                6'b0_00011: enc_5b6b = 7'b0_110001;
-                6'b0_00100: enc_5b6b = 7'b1_110101;
-                6'b0_00101: enc_5b6b = 7'b0_101001;
-                6'b0_00110: enc_5b6b = 7'b0_011001;
-                6'b0_00111: enc_5b6b = 7'b0_111000;
-                6'b0_01000: enc_5b6b = 7'b1_111001;
-                6'b0_01001: enc_5b6b = 7'b0_100101;
-                6'b0_01010: enc_5b6b = 7'b0_010101;
-                6'b0_01011: enc_5b6b = 7'b0_110100;
-                6'b0_01100: enc_5b6b = 7'b0_001101;
-                6'b0_01101: enc_5b6b = 7'b0_101100;
-                6'b0_01110: enc_5b6b = 7'b0_011100;
-                6'b0_01111: enc_5b6b = 7'b1_010111;
-                6'b0_10000: enc_5b6b = 7'b1_011011;
-                6'b0_10001: enc_5b6b = 7'b0_100011;
-                6'b0_10010: enc_5b6b = 7'b0_010011;
-                6'b0_10011: enc_5b6b = 7'b0_110010;
-                6'b0_10100: enc_5b6b = 7'b0_001011;
-                6'b0_10101: enc_5b6b = 7'b0_101010;
-                6'b0_10110: enc_5b6b = 7'b0_011010;
-                6'b0_10111: enc_5b6b = 7'b1_111010;
-                6'b0_11000: enc_5b6b = 7'b1_110011;
-                6'b0_11001: enc_5b6b = 7'b0_100110;
-                6'b0_11010: enc_5b6b = 7'b0_010110;
-                6'b0_11011: enc_5b6b = 7'b1_110110;
-                6'b0_11100: enc_5b6b = 7'b0_001110;
-                6'b0_11101: enc_5b6b = 7'b1_101110;
-                6'b0_11110: enc_5b6b = 7'b1_011110;
-                6'b0_11111: enc_5b6b = 7'b1_101011;
-                6'b1_00000: enc_5b6b = 7'b0_011000;
-                6'b1_00001: enc_5b6b = 7'b0_100010;
-                6'b1_00010: enc_5b6b = 7'b0_010010;
-                6'b1_00011: enc_5b6b = 7'b1_110001;
-                6'b1_00100: enc_5b6b = 7'b0_001010;
-                6'b1_00101: enc_5b6b = 7'b1_101001;
-                6'b1_00110: enc_5b6b = 7'b1_011001;
-                6'b1_00111: enc_5b6b = 7'b1_000111;
-                6'b1_01000: enc_5b6b = 7'b0_000110;
-                6'b1_01001: enc_5b6b = 7'b1_100101;
-                6'b1_01010: enc_5b6b = 7'b1_010101;
-                6'b1_01011: enc_5b6b = 7'b1_110100;
-                6'b1_01100: enc_5b6b = 7'b1_001101;
-                6'b1_01101: enc_5b6b = 7'b1_101100;
-                6'b1_01110: enc_5b6b = 7'b1_011100;
-                6'b1_01111: enc_5b6b = 7'b0_101000;
-                6'b1_10000: enc_5b6b = 7'b0_100100;
-                6'b1_10001: enc_5b6b = 7'b1_100011;
-                6'b1_10010: enc_5b6b = 7'b1_010011;
-                6'b1_10011: enc_5b6b = 7'b1_110010;
-                6'b1_10100: enc_5b6b = 7'b1_001011;
-                6'b1_10101: enc_5b6b = 7'b1_101010;
-                6'b1_10110: enc_5b6b = 7'b1_011010;
-                6'b1_10111: enc_5b6b = 7'b0_000101;
-                6'b1_11000: enc_5b6b = 7'b0_001100;
-                6'b1_11001: enc_5b6b = 7'b1_100110;
-                6'b1_11010: enc_5b6b = 7'b1_010110;
-                6'b1_11011: enc_5b6b = 7'b0_001001;
-                6'b1_11100: enc_5b6b = 7'b1_001110;
-                6'b1_11101: enc_5b6b = 7'b0_010001;
-                6'b1_11110: enc_5b6b = 7'b0_100001;
-                6'b1_11111: enc_5b6b = 7'b0_010100;
+            enc_5b6b = 7'b110_0111;
+            unique case ({rd_in, lo5})
+                6'b00_0000: enc_5b6b = 7'b110_0111;
+                6'b00_0001: enc_5b6b = 7'b101_1101;
+                6'b00_0010: enc_5b6b = 7'b110_1101;
+                6'b00_0011: enc_5b6b = 7'b011_0001;
+                6'b00_0100: enc_5b6b = 7'b111_0101;
+                6'b00_0101: enc_5b6b = 7'b010_1001;
+                6'b00_0110: enc_5b6b = 7'b001_1001;
+                6'b00_0111: enc_5b6b = 7'b011_1000;
+                6'b00_1000: enc_5b6b = 7'b111_1001;
+                6'b00_1001: enc_5b6b = 7'b010_0101;
+                6'b00_1010: enc_5b6b = 7'b001_0101;
+                6'b00_1011: enc_5b6b = 7'b011_0100;
+                6'b00_1100: enc_5b6b = 7'b000_1101;
+                6'b00_1101: enc_5b6b = 7'b010_1100;
+                6'b00_1110: enc_5b6b = 7'b001_1100;
+                6'b00_1111: enc_5b6b = 7'b101_0111;
+                6'b01_0000: enc_5b6b = 7'b101_1011;
+                6'b01_0001: enc_5b6b = 7'b010_0011;
+                6'b01_0010: enc_5b6b = 7'b001_0011;
+                6'b01_0011: enc_5b6b = 7'b011_0010;
+                6'b01_0100: enc_5b6b = 7'b000_1011;
+                6'b01_0101: enc_5b6b = 7'b010_1010;
+                6'b01_0110: enc_5b6b = 7'b001_1010;
+                6'b01_0111: enc_5b6b = 7'b111_1010;
+                6'b01_1000: enc_5b6b = 7'b111_0011;
+                6'b01_1001: enc_5b6b = 7'b010_0110;
+                6'b01_1010: enc_5b6b = 7'b001_0110;
+                6'b01_1011: enc_5b6b = 7'b111_0110;
+                6'b01_1100: enc_5b6b = 7'b000_1110;
+                6'b01_1101: enc_5b6b = 7'b110_1110;
+                6'b01_1110: enc_5b6b = 7'b101_1110;
+                6'b01_1111: enc_5b6b = 7'b110_1011;
+                6'b10_0000: enc_5b6b = 7'b001_1000;
+                6'b10_0001: enc_5b6b = 7'b010_0010;
+                6'b10_0010: enc_5b6b = 7'b001_0010;
+                6'b10_0011: enc_5b6b = 7'b111_0001;
+                6'b10_0100: enc_5b6b = 7'b000_1010;
+                6'b10_0101: enc_5b6b = 7'b110_1001;
+                6'b10_0110: enc_5b6b = 7'b101_1001;
+                6'b10_0111: enc_5b6b = 7'b100_0111;
+                6'b10_1000: enc_5b6b = 7'b000_0110;
+                6'b10_1001: enc_5b6b = 7'b110_0101;
+                6'b10_1010: enc_5b6b = 7'b101_0101;
+                6'b10_1011: enc_5b6b = 7'b111_0100;
+                6'b10_1100: enc_5b6b = 7'b100_1101;
+                6'b10_1101: enc_5b6b = 7'b110_1100;
+                6'b10_1110: enc_5b6b = 7'b101_1100;
+                6'b10_1111: enc_5b6b = 7'b010_1000;
+                6'b11_0000: enc_5b6b = 7'b010_0100;
+                6'b11_0001: enc_5b6b = 7'b110_0011;
+                6'b11_0010: enc_5b6b = 7'b101_0011;
+                6'b11_0011: enc_5b6b = 7'b111_0010;
+                6'b11_0100: enc_5b6b = 7'b100_1011;
+                6'b11_0101: enc_5b6b = 7'b110_1010;
+                6'b11_0110: enc_5b6b = 7'b101_1010;
+                6'b11_0111: enc_5b6b = 7'b000_0101;
+                6'b11_1000: enc_5b6b = 7'b000_1100;
+                6'b11_1001: enc_5b6b = 7'b110_0110;
+                6'b11_1010: enc_5b6b = 7'b101_0110;
+                6'b11_1011: enc_5b6b = 7'b000_1001;
+                6'b11_1100: enc_5b6b = 7'b100_1110;
+                6'b11_1101: enc_5b6b = 7'b001_0001;
+                6'b11_1110: enc_5b6b = 7'b010_0001;
+                6'b11_1111: enc_5b6b = 7'b001_0100;
             endcase
         end
     endfunction
 
     // 802.3 table 36-1: 3b to 4b table, use rd from the six bit half
     function automatic logic [4:0] enc_3b4b(
-        input logic [2:0] y,
-        input logic [4:0] x,
-        input logic       rd
+        input logic [2:0] hi3,
+        input logic [4:0] lo5,
+        input logic       rd_in
     );
         begin
             enc_3b4b = 5'b1_1011;
-            unique case ({rd, y})
-                4'b0_000: enc_3b4b = 5'b1_1011;
-                4'b1_000: enc_3b4b = 5'b0_0100;
-                4'b0_001: enc_3b4b = 5'b0_1001;
-                4'b1_001: enc_3b4b = 5'b1_1001;
-                4'b0_010: enc_3b4b = 5'b0_0101;
-                4'b1_010: enc_3b4b = 5'b1_0101;
-                4'b0_011: enc_3b4b = 5'b0_1100;
-                4'b1_011: enc_3b4b = 5'b1_0011;
-                4'b0_100: enc_3b4b = 5'b1_1101;
-                4'b1_100: enc_3b4b = 5'b0_0010;
-                4'b0_101: enc_3b4b = 5'b0_1010;
-                4'b1_101: enc_3b4b = 5'b1_1010;
-                4'b0_110: enc_3b4b = 5'b0_0110;
-                4'b1_110: enc_3b4b = 5'b1_0110;
-                4'b0_111: enc_3b4b = ((x == 5'd17) || (x == 5'd18) || (x == 5'd20)) ? 5'b1_0111 : 5'b1_1110;
-                4'b1_111: enc_3b4b = ((x == 5'd11) || (x == 5'd13) || (x == 5'd14)) ? 5'b0_1000 : 5'b0_0001;
+            unique case ({rd_in, hi3})
+                4'b0000: enc_3b4b = 5'b1_1011;
+                4'b1000: enc_3b4b = 5'b0_0100;
+                4'b0001: enc_3b4b = 5'b0_1001;
+                4'b1001: enc_3b4b = 5'b1_1001;
+                4'b0010: enc_3b4b = 5'b0_0101;
+                4'b1010: enc_3b4b = 5'b1_0101;
+                4'b0011: enc_3b4b = 5'b0_1100;
+                4'b1011: enc_3b4b = 5'b1_0011;
+                4'b0100: enc_3b4b = 5'b1_1101;
+                4'b1100: enc_3b4b = 5'b0_0010;
+                4'b0101: enc_3b4b = 5'b0_1010;
+                4'b1101: enc_3b4b = 5'b1_1010;
+                4'b0110: enc_3b4b = 5'b0_0110;
+                4'b1110: enc_3b4b = 5'b1_0110;
+                4'b0111: enc_3b4b = ((lo5 == 5'd17) || (lo5 == 5'd18) || (lo5 == 5'd20)) ? 5'b1_0111 : 5'b1_1110;
+                4'b1111: enc_3b4b = ((lo5 == 5'd11) || (lo5 == 5'd13) || (lo5 == 5'd14)) ? 5'b0_1000 : 5'b0_0001;
             endcase
         end
     endfunction
 
     // 802.3 table 36-2: k code table, only project k symbols go here
     always_comb begin
-        six    = 6'b001111;
-        four   = 4'b1010;
-        rd_mid = rd_in;
+        code6 = 6'b00_1111;
+        code4 = 4'b1010;
+        rd6   = rd_in;
         rd_out = rd_in;
 
         if (kin) begin
             unique case ({rd_in, din})
-                9'b0_10111100:  begin code = 10'b0011111010; rd_out = 1'b1; end
-                9'b1_10111100:  begin code = 10'b1100000101; rd_out = 1'b0; end
-                9'b0_11111011:  begin code = 10'b1101101000; rd_out = 1'b0; end
-                9'b1_11111011:  begin code = 10'b0010010111; rd_out = 1'b1; end
-                9'b0_11111101:  begin code = 10'b1011101000; rd_out = 1'b0; end
-                9'b1_11111101:  begin code = 10'b0100010111; rd_out = 1'b1; end
-                9'b0_11110111:  begin code = 10'b1110101000; rd_out = 1'b0; end
-                9'b1_11110111:  begin code = 10'b0001010111; rd_out = 1'b1; end
-                default:        begin code = 10'b0011111010; rd_out = 1'b1; end
+                9'b0_1011_1100:  begin code = 10'b00_1111_1010; rd_out = 1'b1; end
+                9'b1_1011_1100:  begin code = 10'b11_0000_0101; rd_out = 1'b0; end
+                9'b0_1111_1011:  begin code = 10'b11_0110_1000; rd_out = 1'b0; end
+                9'b1_1111_1011:  begin code = 10'b00_1001_0111; rd_out = 1'b1; end
+                9'b0_1111_1101:  begin code = 10'b10_1110_1000; rd_out = 1'b0; end
+                9'b1_1111_1101:  begin code = 10'b01_0001_0111; rd_out = 1'b1; end
+                9'b0_1111_0111:  begin code = 10'b11_1010_1000; rd_out = 1'b0; end
+                9'b1_1111_0111:  begin code = 10'b00_0101_0111; rd_out = 1'b1; end
+                default:        begin code = 10'b00_1111_1010; rd_out = 1'b1; end
             endcase
         end else begin
-            {rd_mid, six} = enc_5b6b(din[4:0], rd_in);
-            {rd_out, four} = enc_3b4b(din[7:5], din[4:0], rd_mid);
-            code = {six, four};
+            {rd6, code6} = enc_5b6b(din[4:0], rd_in);
+            {rd_out, code4} = enc_3b4b(din[7:5], din[4:0], rd6);
+            code = {code6, code4};
         end
     end
 
@@ -158,180 +158,169 @@ module E1000X (
     localparam logic [7:0] K23_7 = 8'hF7;
     localparam logic [7:0] D16_2 = 8'h50;
     localparam logic [7:0] D05_6 = 8'hC5;
+    localparam logic [9:0] IDLE_WORD = 10'b01_0111_1100;
 
     typedef enum logic [2:0] {
-        SEND_IK,
-        SEND_ID,
-        SEND_S,
-        SEND_D,
-        SEND_T,
-        SEND_R
+        IDLE_K,
+        IDLE_D,
+        START_K,
+        DATA_D,
+        TERM_K,
+        EXT_K
     } send_t;
 
-    send_t emit_state;
-    logic [7:0] emit_data;
-    logic       emit_is_k;
-    logic       rd;
+    send_t      state,      next_state;
+    logic [7:0] tx_byte,    next_tx_byte;
+    logic       tx_is_k,    next_tx_is_k;
+    logic       rd,         rd_next;
 
     logic [7:0] fifo_mem [0:7];
-    logic [2:0] wr_ptr;
-    logic [2:0] rd_ptr;
+    logic [2:0] wr_ptr, rd_ptr;
     logic [3:0] fifo_count;
 
-    logic [9:0] enc_code;
-    logic       enc_rd_out;
+    logic [9:0] code;
 
-    logic       consume_data;
-    logic       pop_fifo;
-    logic       push_fifo;
-    logic       have_data_now;
-    logic [7:0] scheduled_data;
-    send_t      next_emit_state;
-    logic [7:0] next_emit_data;
-    logic       next_emit_is_k;
-    logic       frame_pending;
-    logic       idle_data_select;
+    logic       take_data;
+    logic       fifo_pop, fifo_push;
+    logic       has_data;
+    logic [7:0] queued_byte;
+    logic [9:0] tx_word;
 
-    // 802.3 36.2.4.4: rd feeds next symbol, no reset per byte
+    // 802.3 36.2.4.4
     pcs_8b10b_encode u_encoder (
-        .din    (emit_data),
-        .kin    (emit_is_k),
+        .din    (tx_byte),
+        .kin    (tx_is_k),
         .rd_in  (rd),
-        .code   (enc_code),
-        .rd_out (enc_rd_out)
+        .code   (code),
+        .rd_out (rd_next)
     );
 
-    // 802.3 36.2.4.19: bit zero goes first
-    function automatic logic [9:0] tx_order(input logic [9:0] raw);
-        tx_order = {raw[0], raw[1], raw[2], raw[3], raw[4], raw[5], raw[6], raw[7], raw[8], raw[9]};
-    endfunction
+    // 802.3 36.2.4.19
+    assign tx_word = {code[0], code[1], code[2], code[3], code[4], code[5], code[6], code[7], code[8], code[9]};
 
     // 802.3 36.2.5.2.1: pick next ordered set from tx_en and fifo state
     always_comb begin
-        have_data_now = (fifo_count != 4'd0) || TX_EN;
-        frame_pending = have_data_now;
-        idle_data_select = enc_rd_out;
-        scheduled_data = (fifo_count != 4'd0) ? fifo_mem[rd_ptr] : Din;
+        has_data   = (fifo_count != 4'd0) || TX_EN;
+        queued_byte = (fifo_count != 4'd0) ? fifo_mem[rd_ptr] : Din;
 
-        next_emit_state = SEND_IK;
-        next_emit_data  = K28_5;
-        next_emit_is_k  = 1'b1;
-        consume_data    = 1'b0;
+        next_state    = IDLE_K;
+        next_tx_byte  = K28_5;
+        next_tx_is_k  = 1'b1;
+        take_data     = 1'b0;
 
-        unique case (emit_state)
+        unique case (state)
             // 802.3 36.2.4.12: idle starts with k28.5
-            SEND_IK: begin
-                next_emit_state = SEND_ID;
-                next_emit_data  = idle_data_select ? D16_2 : D05_6;
-                next_emit_is_k  = 1'b0;
+            IDLE_K: begin
+                next_state    = IDLE_D;
+                next_tx_byte  = rd_next ? D16_2 : D05_6;
+                next_tx_is_k  = 1'b0;
             end
 
             // 802.3 36.2.4.12: idle second code is d5.6 or d16.2
-            SEND_ID: begin
-                if (frame_pending) begin
-                    next_emit_state = SEND_S;
-                    next_emit_data  = K27_7;
-                    next_emit_is_k  = 1'b1;
+            IDLE_D: begin
+                if (has_data) begin
+                    next_state    = START_K;
+                    next_tx_byte  = K27_7;
+                    next_tx_is_k  = 1'b1;
                 end else begin
-                    next_emit_state = SEND_IK;
-                    next_emit_data  = K28_5;
-                    next_emit_is_k  = 1'b1;
+                    next_state    = IDLE_K;
+                    next_tx_byte  = K28_5;
+                    next_tx_is_k  = 1'b1;
                 end
             end
 
             // 802.3 36.2.4.14: start packet is s, aka k27.7
-            SEND_S: begin
-                if (have_data_now) begin
-                    next_emit_state = SEND_D;
-                    next_emit_data  = scheduled_data;
-                    next_emit_is_k  = 1'b0;
-                    consume_data    = 1'b1;
+            START_K: begin
+                if (has_data) begin
+                    next_state    = DATA_D;
+                    next_tx_byte  = queued_byte;
+                    next_tx_is_k  = 1'b0;
+                    take_data     = 1'b1;
                 end else begin
-                    next_emit_state = SEND_S;
-                    next_emit_data  = K27_7;
-                    next_emit_is_k  = 1'b1;
+                    next_state    = START_K;
+                    next_tx_byte  = K27_7;
+                    next_tx_is_k  = 1'b1;
                 end
             end
 
             // 802.3 36.2.4.11: data code groups are plain gmii bytes
-            SEND_D: begin
-                if (have_data_now) begin
-                    next_emit_state = SEND_D;
-                    next_emit_data  = scheduled_data;
-                    next_emit_is_k  = 1'b0;
-                    consume_data    = 1'b1;
+            DATA_D: begin
+                if (has_data) begin
+                    next_state    = DATA_D;
+                    next_tx_byte  = queued_byte;
+                    next_tx_is_k  = 1'b0;
+                    take_data     = 1'b1;
                 end else begin
-                    next_emit_state = SEND_T;
-                    next_emit_data  = K29_7;
-                    next_emit_is_k  = 1'b1;
+                    next_state    = TERM_K;
+                    next_tx_byte  = K29_7;
+                    next_tx_is_k  = 1'b1;
                 end
             end
 
             // 802.3 36.2.4.15: end packet starts with t, aka k29.7
-            SEND_T: begin
-                if (frame_pending) begin
-                    next_emit_state = SEND_R;
-                    next_emit_data  = K23_7;
-                    next_emit_is_k  = 1'b1;
+            TERM_K: begin
+                if (has_data) begin
+                    next_state    = EXT_K;
+                    next_tx_byte  = K23_7;
+                    next_tx_is_k  = 1'b1;
                 end else begin
-                    next_emit_state = SEND_IK;
-                    next_emit_data  = K28_5;
-                    next_emit_is_k  = 1'b1;
+                    next_state    = IDLE_K;
+                    next_tx_byte  = K28_5;
+                    next_tx_is_k  = 1'b1;
                 end
             end
 
             // 802.3 36.2.4.16: r gives carrier extend and packet gap help
-            SEND_R: begin
-                if (frame_pending) begin
-                    next_emit_state = SEND_S;
-                    next_emit_data  = K27_7;
-                    next_emit_is_k  = 1'b1;
+            EXT_K: begin
+                if (has_data) begin
+                    next_state    = START_K;
+                    next_tx_byte  = K27_7;
+                    next_tx_is_k  = 1'b1;
                 end else begin
-                    next_emit_state = SEND_IK;
-                    next_emit_data  = K28_5;
-                    next_emit_is_k  = 1'b1;
+                    next_state    = IDLE_K;
+                    next_tx_byte  = K28_5;
+                    next_tx_is_k  = 1'b1;
                 end
             end
 
             default: begin
-                next_emit_state = SEND_IK;
-                next_emit_data  = K28_5;
-                next_emit_is_k  = 1'b1;
+                next_state    = IDLE_K;
+                next_tx_byte  = K28_5;
+                next_tx_is_k  = 1'b1;
             end
         endcase
 
-        pop_fifo  = consume_data && (fifo_count != 4'd0);
-        push_fifo = TX_EN && !(consume_data && (fifo_count == 4'd0)) && ((fifo_count != 4'd8) || pop_fifo);
+        fifo_pop  = take_data && (fifo_count != 4'd0);
+        fifo_push = TX_EN && !(take_data && (fifo_count == 4'd0)) && ((fifo_count != 4'd8) || fifo_pop);
     end
 
     // 802.3 36.2.4.2: one code group per clock, reg'd for gate timing
     always_ff @(posedge Clk) begin
         if (Reset) begin
-            Dout        <= tx_order(10'b0011111010);
+            Dout        <= IDLE_WORD;
             rd          <= 1'b1;
-            emit_state  <= SEND_ID;
-            emit_data   <= D16_2;
-            emit_is_k   <= 1'b0;
+            state       <= IDLE_D;
+            tx_byte     <= D16_2;
+            tx_is_k     <= 1'b0;
             wr_ptr      <= 3'd0;
             rd_ptr      <= 3'd0;
             fifo_count  <= 4'd0;
             for (int i = 0; i < 8; i++) fifo_mem[i] <= 8'h00;
         end else begin
-            Dout       <= tx_order(enc_code);
-            rd         <= enc_rd_out;
-            emit_state <= next_emit_state;
-            emit_data  <= next_emit_data;
-            emit_is_k  <= next_emit_is_k;
+            Dout        <= tx_word;
+            rd          <= rd_next;
+            state       <= next_state;
+            tx_byte     <= next_tx_byte;
+            tx_is_k     <= next_tx_is_k;
 
-            if (push_fifo) begin
+            if (fifo_push) begin
                 fifo_mem[wr_ptr] <= Din;
                 wr_ptr <= wr_ptr + 3'd1;
             end
 
-            if (pop_fifo) rd_ptr <= rd_ptr + 3'd1;
-        
+            if (fifo_pop) rd_ptr <= rd_ptr + 3'd1;
 
-            unique case ({push_fifo, pop_fifo})
+            unique case ({fifo_push, fifo_pop})
                 2'b10:      fifo_count <= fifo_count + 4'd1;
                 2'b01:      fifo_count <= fifo_count - 4'd1;
                 default:    fifo_count <= fifo_count;
