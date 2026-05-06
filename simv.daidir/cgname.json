@@ -191,28 +191,34 @@
         "module",
         32
     ],
+    "E1000X": [
+        "E1000X",
+        "jj2Zg",
+        "module",
+        33
+    ],
     "...MASTER...": [
         "SIM",
         "amcQw",
         "module",
-        33
+        34
     ],
     "udp_dff": [
         "udp_dff",
         "exIG1",
         "udp",
-        34
+        35
     ],
     "udp_tlat": [
         "udp_tlat",
         "gSqMj",
         "udp",
-        35
+        36
     ],
     "udp_mux2": [
         "udp_mux2",
         "U7Vwg",
         "udp",
-        36
+        37
     ]
 }

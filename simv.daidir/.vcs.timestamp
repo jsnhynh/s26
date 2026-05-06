@@ -22,7 +22,7 @@
 -sverilog
 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/bin/vcs1
 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v
-tbs26gates.svp
+tbs26gates_debug.svp
 83
 which_declare=declare -f
 cdk_dir=/apps/cadence/IC50/tools/dfII/local
@@ -94,7 +94,7 @@ HOSTTYPE=x86_64-linux
 HISTCONTROL=ignoredups
 GROUP=domain users
 GNOME_TERMINAL_SERVICE=:1.88
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/5b234757_02a5_468a_98bf_6b8ed3a60300
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1bb6fe92_1bfd_45fe_98ec_16d34bbb5888
 DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1755047700/bus
 COLORTERM=truecolor
@@ -110,13 +110,13 @@ ARCH=linux
 0
 0
 3
-1778106089 E1000X_gates.v
-1777588950 tbs26gates.svp
+1778107075 E1000X_gates.v
+1778107040 tbs26gates_debug.svp
 1204216060 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v
 4
 1723522646 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libvirsim.so
 1723520847 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/liberrorinf.so
 1723520604 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libsnpsmalloc.so
 1723521397 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/libvfs.so
-1778106092 simv.daidir
+1778107079 simv.daidir
 -1 partitionlib

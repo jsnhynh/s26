@@ -31,10 +31,10 @@ Please use '-no_save' simv switch to avoid this.
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed May  6 15:20:48 2026
+Current time:       Wed May  6 15:37:52 2026
 Hostname:           coe-ee-cad2.sjsuad.sjsu.edu
 CPU Model:          Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
-CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 1.46 GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 0.80 GHz
 OS:                 Linux 5.14.0-611.16.1.el9_7.x86_64
 RAM:                 15 GB (Free   3 GB)
 Swap:                 7 GB (Free   7 GB)
@@ -43,7 +43,7 @@ Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
 Work Disk:          963 GB (Free 707 GB)
 Tmp Disk:            69 GB (Free  49 GB)
 
-CPU Load: 5%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 set link_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb
 set target_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db}
@@ -56,14 +56,14 @@ Loading db file '/apps/synopsys/dc_compiler_2023_V/syn/V-2023.12-SP5/libraries/s
 Loading db file '/apps/synopsys/dc_compiler_2023_V/syn/V-2023.12-SP5/libraries/syn/standard.sldb'
   Loading link library 'gscl45nm'
   Loading link library 'gtech'
-Loading sverilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+Loading sverilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv
+Compiling source file /home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv
 
 Statistics for case statements in always block at line 49 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -72,7 +72,7 @@ Statistics for case statements in always block at line 49 in file
 
 Inferred memory devices in process
 	in routine fifo line 49 in file
-		'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'.
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -90,7 +90,7 @@ Statistics for MUX_OPs
 ======================================================
 
 Statistics for case statements in always block at line 226 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -100,7 +100,7 @@ Statistics for case statements in always block at line 226 in file
 ===============================================
 
 Statistics for case statements in always block at line 367 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -108,7 +108,7 @@ Statistics for case statements in always block at line 367 in file
 ===============================================
 
 Statistics for case statements in always block at line 430 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -116,7 +116,7 @@ Statistics for case statements in always block at line 430 in file
 ===============================================
 
 Statistics for case statements in always block at line 473 in file
-	'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'
+	'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -125,7 +125,7 @@ Statistics for case statements in always block at line 473 in file
 
 Inferred memory devices in process
 	in routine E1000X line 405 in file
-		'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'.
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -134,7 +134,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine E1000X line 512 in file
-		'/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X.sv'.
+		'/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X.sv'.
 ===================================================================================
 |      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===================================================================================
@@ -143,7 +143,7 @@ Inferred memory devices in process
 |         rd_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
 ===================================================================================
 Presto compilation completed successfully.
-Current design is now '/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/fifo.db:fifo'
+Current design is now '/home/019175806@SJSUAD.SJSU.EDU/287/s26/fifo.db:fifo'
 Loaded 3 designs.
 Current design is 'fifo'.
 fifo enc8b10b_core E1000X
@@ -181,7 +181,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     V-2023.12-SP5
-Date:        Wed May  6 15:20:48 2026
+Date:        Wed May  6 15:37:52 2026
 ****************************************
 
                    Name                                            Total
@@ -229,9 +229,8 @@ Warning: In design 'E1000X', a pin on submodule 'u_enc_la1' is connected to logi
 1
 compile_ultra
 Information: Performing leakage power optimization. (PWR-850)
-CPU Load: 5%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
-Analyzing: "/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db"
-Library analysis succeeded.
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+Alib files are up-to-date.
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
@@ -278,14 +277,14 @@ Information: Ungrouping hierarchy u_enc_la1 before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy u_enc_la0 before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy u_enc1 before Pass 1 (OPT-776)
 Information: Ungrouping 5 of 6 hierarchies before Pass 1 (OPT-775)
-CPU Load: 6%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'E1000X'
 Information: Added key list 'DesignWare' to design 'E1000X'. (DDB-72)
-CPU Load: 6%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -432,7 +431,7 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
     0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
     0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
     0:00:03    2880.6      0.00       0.0     313.4                           12720.0430      0.00  
-CPU Load: 6%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 10%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Loading db file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db'
 
 
@@ -443,7 +442,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   ---------------------
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-CPU Load: 6%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 10%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -478,7 +477,7 @@ Report : timing
         -max_paths 5
 Design : E1000X
 Version: V-2023.12-SP5
-Date   : Wed May  6 15:21:29 2026
+Date   : Wed May  6 15:37:55 2026
 ****************************************
 
 Operating Conditions: typical   Library: gscl45nm
@@ -857,13 +856,13 @@ Wire Load Model Mode: top
 
 1
 write -hierarchy -format verilog -output E1000X_gates.v
-Writing verilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26_base/E1000X_gates.v'.
+Writing verilog file '/home/019175806@SJSUAD.SJSU.EDU/287/s26/E1000X_gates.v'.
 1
 quit
 
 Memory usage for this session 135 Mbytes.
 Memory usage for this session including child processes 138 Mbytes.
-CPU usage for this session 41 seconds ( 0.01 hours ).
-Elapsed time for this session 43 seconds ( 0.01 hours ).
+CPU usage for this session 4 seconds ( 0.00 hours ).
+Elapsed time for this session 6 seconds ( 0.00 hours ).
 
 Thank you...

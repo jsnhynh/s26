@@ -1,10 +1,6 @@
-rm: cannot remove 'simv.daidir/.nfs00000000027e2dc1000012cb': Device or resource busy
-rm: cannot remove 'simv.daidir/.nfs00000000027e2de8000012ca': Device or resource busy
-rm: cannot remove 'simv.daidir/.nfs00000000027e2dc1000012cb': Device or resource busy
-rm: cannot remove 'simv.daidir/.nfs00000000027e2de8000012ca': Device or resource busy
 019175806
 019175806
-Namespace(resultsFileName='results.txt', gate_vcd=True, gate_vcd_file='s26p287_gate_500_560.vcd', gate_dump_start_ns=500, gate_dump_stop_ns=560, gate_dump_limit_bytes=500000000)
+Namespace(resultsFileName='results.txt')
 clock period 6.666666666666667ns
 /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/bin/vcs: line 3860: lsb_release: command not found
 
@@ -15,7 +11,7 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   Please refer to release notes for information on supported platforms.
 
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed May  6 15:17:55 2026
+         Version U-2023.03-SP2-8 -- Wed May  6 15:37:23 2026
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -50,14 +46,14 @@ All of 3 modules done
 /bin/ld: warning: creating DT_TEXTREL in a shared object
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _226318_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _232379_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: .402 seconds to compile + .630 seconds to elab + .194 seconds to link
+CPU time: .361 seconds to compile + .406 seconds to elab + .181 seconds to link
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:17 2026
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:37 2026
 tpkt has  35 expected results
 tpkt has  48 expected results
 tpkt has  51 expected results
@@ -230,10 +226,9 @@ $finish called from file "tbs26.svp", line 61.
 $finish at simulation time           2667511000
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 2667511000 ps
-CPU Time:      1.010 seconds;       Data structure size:   0.0Mb
-Wed May  6 15:17:59 2026
+CPU Time:      0.980 seconds;       Data structure size:   0.0Mb
+Wed May  6 15:37:26 2026
 It ran OK I think
-Preserved RTL VCD as s26p287_rtl_debug.vcd
 
 
 
@@ -274,10 +269,10 @@ Please use '-no_save' simv switch to avoid this.
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed May  6 15:18:03 2026
+Current time:       Wed May  6 15:37:29 2026
 Hostname:           coe-ee-cad2.sjsuad.sjsu.edu
 CPU Model:          Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
-CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 2.57 GHz
+CPU Details:        Cores = 16 : Sockets = 1 : Cache Size = 16384 KB : Freq = 4.41 GHz
 OS:                 Linux 5.14.0-611.16.1.el9_7.x86_64
 RAM:                 15 GB (Free   3 GB)
 Swap:                 7 GB (Free   7 GB)
@@ -286,7 +281,7 @@ Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
 Work Disk:          963 GB (Free 707 GB)
 Tmp Disk:            69 GB (Free  49 GB)
 
-CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 set link_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb}
 /home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db /apps/synopsys/PrimeTimeNew/pts/Q-2019.12/libraries/syn/dw_foundation.sldb
 set target_library {/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db}
@@ -424,7 +419,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     V-2023.12-SP5
-Date:        Wed May  6 15:18:03 2026
+Date:        Wed May  6 15:37:30 2026
 ****************************************
 
                    Name                                            Total
@@ -472,7 +467,7 @@ Warning: In design 'E1000X', a pin on submodule 'u_enc_la1' is connected to logi
 1
 compile_ultra
 Information: Performing leakage power optimization. (PWR-850)
-CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Alib files are up-to-date.
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -520,14 +515,14 @@ Information: Ungrouping hierarchy u_enc_la1 before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy u_enc_la0 before Pass 1 (OPT-776)
 Information: Ungrouping hierarchy u_enc1 before Pass 1 (OPT-776)
 Information: Ungrouping 5 of 6 hierarchies before Pass 1 (OPT-775)
-CPU Load: 0%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'E1000X'
 Information: Added key list 'DesignWare' to design 'E1000X'. (DDB-72)
-CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -540,13 +535,13 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
-    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:01    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:01    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
 
   Beginning Constant Register Removal
   -----------------------------------
-    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
-    0:00:02    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:01    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
+    0:00:01    2194.0      0.00       0.0    1055.0                           8649.0254      0.00  
 
   Beginning Global Optimizations
   ------------------------------
@@ -587,39 +582,39 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
 
 
   Beginning Design Rule Fixing  (max_capacitance)
@@ -629,52 +624,52 @@ Information: There is no timing violation in design E1000X. Delay-based auto_ung
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:02    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
+    0:00:01    2164.9      0.00       0.0    1032.9                           8036.3232      0.00  
   Global Optimization (Phase 30)
   Global Optimization (Phase 31)
   Global Optimization (Phase 32)
-    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
-    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
-    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
-    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
-    0:00:03    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:02    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:02    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:02    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:02    2686.3      0.00       0.0     423.5                           10889.6377      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
-    0:00:03    2880.6      0.00       0.0     313.4                           12720.0430      0.00  
-CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2671.3      0.00       0.0     428.9                           10603.2715      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2886.2      0.00       0.0     311.4                           12827.4277      0.00  
+    0:00:02    2880.6      0.00       0.0     313.4                           12720.0430      0.00  
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Loading db file '/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.db'
 
 
@@ -685,7 +680,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   ---------------------
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-CPU Load: 1%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
+CPU Load: 11%, Ram Free: 3 GB, Swap Free: 7 GB, Work Disk Free: 707 GB, Tmp Disk Free: 49 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -720,7 +715,7 @@ Report : timing
         -max_paths 5
 Design : E1000X
 Version: V-2023.12-SP5
-Date   : Wed May  6 15:18:07 2026
+Date   : Wed May  6 15:37:33 2026
 ****************************************
 
 Operating Conditions: typical   Library: gscl45nm
@@ -1105,8 +1100,8 @@ quit
 
 Memory usage for this session 135 Mbytes.
 Memory usage for this session including child processes 138 Mbytes.
-CPU usage for this session 5 seconds ( 0.00 hours ).
-Elapsed time for this session 7 seconds ( 0.00 hours ).
+CPU usage for this session 4 seconds ( 0.00 hours ).
+Elapsed time for this session 6 seconds ( 0.00 hours ).
 
 Thank you...
 num returned lines 868
@@ -1119,7 +1114,7 @@ Warning-[LNX_OS_VERUN] Unsupported Linux version
   Please refer to release notes for information on supported platforms.
 
                          Chronologic VCS (TM)
-         Version U-2023.03-SP2-8 -- Wed May  6 15:18:07 2026
+         Version U-2023.03-SP2-8 -- Wed May  6 15:37:33 2026
 
                     Copyright (c) 1991 - 2024 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -1186,7 +1181,7 @@ Warning-[TCL-NTCL] Negative Timing Check Limit
 
 Starting vcs inline pass...
 
-34 modules and 3 UDPs read.
+31 modules and 3 UDPs read.
 recompiling module AND2X1
 recompiling module AND2X2
 recompiling module AOI21X1
@@ -1199,7 +1194,6 @@ recompiling module CLKBUF3
 recompiling module DFFNEGX1
 recompiling module DFFPOSX1
 recompiling module DFFSR
-recompiling module FAX1
 recompiling module HAX1
 recompiling module INVX1
 recompiling module INVX2
@@ -1214,71 +1208,61 @@ recompiling module NOR3X1
 recompiling module OAI21X1
 recompiling module OAI22X1
 recompiling module OR2X1
-recompiling module OR2X2
 recompiling module TBUFX1
 recompiling module TBUFX2
 recompiling module XNOR2X1
 recompiling module XOR2X1
 recompiling module tb
-recompiling module E1000X
-All of 34 modules done
-/bin/ld: rmapats_mop.o: warning: relocation against `lvlQueue' in read-only section `.text'
+All of 31 modules done
+/bin/ld: rmapats_mop.o: warning: relocation against `HsimLongLong2Int' in read-only section `.text'
 /bin/ld: warning: creating DT_TEXTREL in a shared object
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
-g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _226868_archive_1.so objs/udps/exIG1.o objs/udps/gSqMj.o objs/udps/U7Vwg.o  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
+g++  -o ../simv      -m32 -m32 -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib -L/apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _232870_archive_1.so objs/udps/exIG1.o objs/udps/gSqMj.o objs/udps/U7Vwg.o  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/vcs_save_restore_new.o /apps/synopsys/vcs_2023/vcs/U-2023.03-SP2-8/linux/lib/ctype-stubs_32.a -ldl  -lc -lm -lpthread -ldl 
 ../simv up to date
-CPU time: .654 seconds to compile + .641 seconds to elab + .307 seconds to link
+CPU time: .552 seconds to compile + .572 seconds to elab + .182 seconds to link
 Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
 Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:18 2026
-Gate VCD debug enabled: file=s26p287_gate_500_560.vcd start=500ns stop=560ns
+Compiler version U-2023.03-SP2-8; Runtime version U-2023.03-SP2-8;  May  6 15:37 2026
 tpkt has  35 expected results
+Error: "tbs26gates.svp", 62: tb.ckDr: at time 230000 ps
+Received 23a -- expected 33a curdisp -1 @230.0 ns
+tpkt has  48 expected results
+tpkt has  51 expected results
 tpkt has  56 expected results
-GATE_DBG t=50000 Clk=0 Reset=0 TX_EN=1 Din=ff Dout=289 DoutBin=1010001001 Dout5=0 Dout6=0 state=001 rd=1
-GATE_DBG t=50500 Clk=1 Reset=0 TX_EN=1 Din=2c Dout=05b DoutBin=0001011011 Dout5=0 Dout6=1 state=010 rd=0
-GATE_DBG t=51000 Clk=0 Reset=0 TX_EN=1 Din=2c Dout=05b DoutBin=0001011011 Dout5=0 Dout6=1 state=010 rd=0
-GATE_DBG t=51500 Clk=1 Reset=0 TX_EN=1 Din=6c Dout=235 DoutBin=1000110101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=52000 Clk=0 Reset=0 TX_EN=1 Din=6c Dout=235 DoutBin=1000110101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=52500 Clk=1 Reset=0 TX_EN=1 Din=14 Dout=26c DoutBin=1001101100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=53000 Clk=0 Reset=0 TX_EN=1 Din=14 Dout=26c DoutBin=1001101100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=53500 Clk=1 Reset=0 TX_EN=1 Din=b0 Dout=0ec DoutBin=0011101100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=54000 Clk=0 Reset=0 TX_EN=1 Din=b0 Dout=0ec DoutBin=0011101100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=54500 Clk=1 Reset=0 TX_EN=1 Din=69 Dout=374 DoutBin=1101110100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=55000 Clk=0 Reset=0 TX_EN=1 Din=69 Dout=374 DoutBin=1101110100 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=55500 Clk=1 Reset=0 TX_EN=1 Din=3c Dout=149 DoutBin=0101001001 Dout5=0 Dout6=1 state=011 rd=1
-GATE_DBG t=56000 Clk=0 Reset=0 TX_EN=1 Din=3c Dout=149 DoutBin=0101001001 Dout5=0 Dout6=1 state=011 rd=1
-GATE_DBG t=56500 Clk=1 Reset=0 TX_EN=1 Din=b7 Dout=0e9 DoutBin=0011101001 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=57000 Clk=0 Reset=0 TX_EN=1 Din=b7 Dout=0e9 DoutBin=0011101001 Dout5=1 Dout6=1 state=011 rd=0
-GATE_DBG t=57500 Clk=1 Reset=0 TX_EN=1 Din=c8 Dout=25c DoutBin=1001011100 Dout5=0 Dout6=1 state=011 rd=0
-GATE_DBG t=58000 Clk=0 Reset=0 TX_EN=1 Din=c8 Dout=25c DoutBin=1001011100 Dout5=0 Dout6=1 state=011 rd=0
-GATE_DBG t=58500 Clk=1 Reset=0 TX_EN=1 Din=62 Dout=157 DoutBin=0101010111 Dout5=0 Dout6=1 state=011 rd=0
-GATE_DBG t=59000 Clk=0 Reset=0 TX_EN=1 Din=62 Dout=157 DoutBin=0101010111 Dout5=0 Dout6=1 state=011 rd=0
-GATE_DBG t=59500 Clk=1 Reset=0 TX_EN=1 Din=b8 Dout=198 DoutBin=0110011000 Dout5=0 Dout6=0 state=011 rd=1
-GATE_DBG t=60000 Clk=0 Reset=0 TX_EN=1 Din=b8 Dout=198 DoutBin=0110011000 Dout5=0 Dout6=0 state=011 rd=1
-GATE_DBG t=60500 Clk=1 Reset=0 TX_EN=1 Din=5c Dout=32d DoutBin=1100101101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=61000 Clk=0 Reset=0 TX_EN=1 Din=5c Dout=32d DoutBin=1100101101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=61500 Clk=1 Reset=0 TX_EN=1 Din=45 Dout=14c DoutBin=0101001100 Dout5=0 Dout6=1 state=011 rd=1
-GATE_DBG t=62000 Clk=0 Reset=0 TX_EN=1 Din=45 Dout=14c DoutBin=0101001100 Dout5=0 Dout6=1 state=011 rd=1
-GATE_DBG t=62500 Clk=1 Reset=0 TX_EN=1 Din=e8 Dout=29c DoutBin=1010011100 Dout5=0 Dout6=0 state=011 rd=0
-GATE_DBG t=63000 Clk=0 Reset=0 TX_EN=1 Din=e8 Dout=29c DoutBin=1010011100 Dout5=0 Dout6=0 state=011 rd=0
-GATE_DBG t=63500 Clk=1 Reset=0 TX_EN=1 Din=29 Dout=2a5 DoutBin=1010100101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=64000 Clk=0 Reset=0 TX_EN=1 Din=29 Dout=2a5 DoutBin=1010100101 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=64500 Clk=1 Reset=0 TX_EN=1 Din=5e Dout=227 DoutBin=1000100111 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=65000 Clk=0 Reset=0 TX_EN=1 Din=5e Dout=227 DoutBin=1000100111 Dout5=1 Dout6=0 state=011 rd=0
-GATE_DBG t=65500 Clk=1 Reset=0 TX_EN=1 Din=1a Dout=269 DoutBin=1001101001 Dout5=1 Dout6=1 state=011 rd=0
+tpkt has   5 expected results
+tpkt has  50 expected results
+tpkt has  50 expected results
+Error: "tbs26gates.svp", 62: tb.ckDr: at time 3810000 ps
+Received 02e -- expected 12e curdisp -1 @3810.0 ns
+Error: "tbs26gates.svp", 62: tb.ckDr: at time 3820000 ps
+Received 227 -- expected 327 curdisp -1 @3820.0 ns
+tpkt has  34 expected results
+Error: "tbs26gates.svp", 62: tb.ckDr: at time 4370000 ps
+Received 22b -- expected 32b curdisp -1 @4370.0 ns
+tpkt has  15 expected results
+tpkt has  10 expected results
+tpkt has   5 expected results
+tpkt has  18 expected results
+tpkt has  29 expected results
+tpkt has  49 expected results
+tpkt has  15 expected results
+tpkt has  26 expected results
+tpkt has  44 expected results
 
 "/home/morris/FreePDK45/osu_soc/lib/files/gscl45nm.v", 301: Timing violation in tb.PROTECTED
-    $setup( posedge D:93997, posedge CLK:94000, limit: 9 );
+    $setup( posedge D:746997, posedge CLK:747000, limit: 9 );
 
-Fatal: "tbs26gates.svp", 105: tb.ckDr: at time 950000 ps
-Dout contains one or more X values @950.0 ns
-$finish called from file "tbs26gates.svp", line 105.
-$finish at simulation time                95000
+Fatal: "tbs26gates.svp", 62: tb.ckDr: at time 7480000 ps
+Dout contains one or more X values @7480.0 ns
+$finish called from file "tbs26gates.svp", line 62.
+$finish at simulation time               748000
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 950000 ps
-CPU Time:      0.530 seconds;       Data structure size:   0.1Mb
-Wed May  6 15:18:11 2026
-VCS simulation didn't complete successfully
+Time: 7480000 ps
+CPU Time:      0.550 seconds;       Data structure size:   0.1Mb
+Wed May  6 15:37:36 2026
+Error: "tbs26gates.svp", 62: tb.ckDr: at time 230000 ps
+VCS simulation failed
+
